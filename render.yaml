@@ -47,7 +47,7 @@ services:
   - name: twinflow-ai
     type: web
     runtime: image
-    repo: https://github.com/your-org/twinflow-ai
+    repo: https://github.com/prajwal-Inovator/Traffic_twinflow-ai
     branch: main
     plan: professional
     dockerfilePath: docker/Dockerfile.ai

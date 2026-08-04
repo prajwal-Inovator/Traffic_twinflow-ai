@@ -17,20 +17,7 @@ from .core.indexes import ensure_indexes
 async def lifespan(app: FastAPI):
     logger.info("Starting TwinFlow AI Backend")
     await connect_to_mongo()
-    await ensure_indexes()   # <-- add this
-    yield
-    await close_mongo_connection()
-    logger.info("Shutting down TwinFlow AI Backend")
-
-
-# Setup logging
-setup_logging()
-logger = logging.getLogger(__name__)
-
-@asynccontextmanager
-async def lifespan(app: FastAPI):
-    logger.info("Starting TwinFlow AI Backend")
-    await connect_to_mongo()
+    await ensure_indexes()
     yield
     await close_mongo_connection()
     logger.info("Shutting down TwinFlow AI Backend")

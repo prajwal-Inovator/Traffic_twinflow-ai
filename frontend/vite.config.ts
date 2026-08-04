@@ -9,11 +9,11 @@ export default defineConfig(({ mode }) => {
       port: 3000,
       proxy: {
         '/api': {
-          target: env.VITE_API_URL || 'http://localhost:8000',
+          target: env.VITE_API_URL || 'https://twinflow-backend.onrender.com',
           changeOrigin: true,
         },
         '/ws': {
-          target: env.VITE_WS_URL || 'ws://localhost:8000',
+          target: env.VITE_WS_URL || 'wss://twinflow-backend.onrender.com/ws',
           ws: true,
         },
       },

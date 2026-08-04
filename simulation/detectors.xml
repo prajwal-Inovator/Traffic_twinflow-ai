@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<additional>
+    <inductionLoop id="det_1" lane="edge1_0" pos="20" freq="60" file="detector_output.xml"/>
+    <inductionLoop id="det_2" lane="edge2_0" pos="20" freq="60" file="detector_output.xml"/>
+    <inductionLoop id="det_3" lane="edge3_0" pos="20" freq="60" file="detector_output.xml"/>
+    <inductionLoop id="det_4" lane="edge4_0" pos="20" freq="60" file="detector_output.xml"/>
+</additional>

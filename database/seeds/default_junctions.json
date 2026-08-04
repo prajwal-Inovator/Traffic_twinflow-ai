@@ -1,0 +1,36 @@
+[
+  {
+    "id": "J001",
+    "name": "Connaught Place",
+    "lat": 28.6304,
+    "lng": 77.2177,
+    "vehicle_count": 0,
+    "queue_length": 0,
+    "signal_phase": "green",
+    "green_time": 60,
+    "red_time": 30,
+    "emergency_status": false,
+    "bus_priority": false,
+    "pollution": 85,
+    "weather": "clear",
+    "current_delay": 0,
+    "predicted_vehicles": 0
+  },
+  {
+    "id": "J002",
+    "name": "India Gate",
+    "lat": 28.6129,
+    "lng": 77.2295,
+    "vehicle_count": 0,
+    "queue_length": 0,
+    "signal_phase": "red",
+    "green_time": 45,
+    "red_time": 45,
+    "emergency_status": false,
+    "bus_priority": false,
+    "pollution": 78,
+    "weather": "clear",
+    "current_delay": 0,
+    "predicted_vehicles": 0
+  }
+]

@@ -1,0 +1,11 @@
+# digital_twin/config.yaml
+city: "Delhi, India"
+bounding_box:
+  # approximate Delhi area
+  min_lat: 28.4
+  max_lat: 28.8
+  min_lon: 77.0
+  max_lon: 77.3
+network_type: "drive"  # drive, walk, bike, all
+osm_cache: true
+data_dir: "./data/osm"

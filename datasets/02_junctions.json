@@ -1,0 +1,272 @@
+[
+  {
+    "junction_id":"J0001",
+    "junction_name":"Silk Board Junction",
+    "latitude":12.9172,
+    "longitude":77.6228,
+    "number_of_roads":4,
+    "junction_type":"Signalized",
+    "priority_level":"High"
+  },
+  {
+    "junction_id":"J0002",
+    "junction_name":"Marathahalli Bridge",
+    "latitude":12.9569,
+    "longitude":77.7011,
+    "number_of_roads":2,
+    "junction_type":"Signalized",
+    "priority_level":"High"
+  },
+  {
+    "junction_id":"J0003",
+    "junction_name":"K R Puram Junction",
+    "latitude":13.0025,
+    "longitude":77.6968,
+    "number_of_roads":4,
+    "junction_type":"Flyover",
+    "priority_level":"High"
+  },
+  {
+    "junction_id":"J0004",
+    "junction_name":"Hebbal Flyover",
+    "latitude":13.0355,
+    "longitude":77.597,
+    "number_of_roads":2,
+    "junction_type":"Roundabout",
+    "priority_level":"High"
+  },
+  {
+    "junction_id":"J0005",
+    "junction_name":"Tin Factory Junction",
+    "latitude":12.9987,
+    "longitude":77.665,
+    "number_of_roads":7,
+    "junction_type":"Roundabout",
+    "priority_level":"Medium"
+  },
+  {
+    "junction_id":"J0006",
+    "junction_name":"Yeshwanthpur Circle",
+    "latitude":13.0284,
+    "longitude":77.554,
+    "number_of_roads":6,
+    "junction_type":"Roundabout",
+    "priority_level":"Medium"
+  },
+  {
+    "junction_id":"J0007",
+    "junction_name":"Majestic (KBS) Junction",
+    "latitude":12.9767,
+    "longitude":77.5713,
+    "number_of_roads":4,
+    "junction_type":"Signalized",
+    "priority_level":"High"
+  },
+  {
+    "junction_id":"J0008",
+    "junction_name":"Trinity Circle",
+    "latitude":12.9718,
+    "longitude":77.6197,
+    "number_of_roads":4,
+    "junction_type":"Signalized",
+    "priority_level":"Medium"
+  },
+  {
+    "junction_id":"J0009",
+    "junction_name":"Domlur Flyover",
+    "latitude":12.9611,
+    "longitude":77.6387,
+    "number_of_roads":3,
+    "junction_type":"Uncontrolled",
+    "priority_level":"Medium"
+  },
+  {
+    "junction_id":"J0010",
+    "junction_name":"Sarjapur Junction",
+    "latitude":12.901,
+    "longitude":77.687,
+    "number_of_roads":1,
+    "junction_type":"Signalized",
+    "priority_level":"Medium"
+  },
+  {
+    "junction_id":"J0011",
+    "junction_name":"Bannerghatta Circle",
+    "latitude":12.899,
+    "longitude":77.597,
+    "number_of_roads":2,
+    "junction_type":"Signalized",
+    "priority_level":"Medium"
+  },
+  {
+    "junction_id":"J0012",
+    "junction_name":"Electronic City Toll",
+    "latitude":12.8452,
+    "longitude":77.6602,
+    "number_of_roads":2,
+    "junction_type":"Signalized",
+    "priority_level":"High"
+  },
+  {
+    "junction_id":"J0013",
+    "junction_name":"Iblur Junction",
+    "latitude":12.935,
+    "longitude":77.685,
+    "number_of_roads":4,
+    "junction_type":"Roundabout",
+    "priority_level":"Medium"
+  },
+  {
+    "junction_id":"J0014",
+    "junction_name":"Bellandur Junction",
+    "latitude":12.926,
+    "longitude":77.677,
+    "number_of_roads":2,
+    "junction_type":"Roundabout",
+    "priority_level":"Medium"
+  },
+  {
+    "junction_id":"J0015",
+    "junction_name":"Kadubeesanahalli Junction",
+    "latitude":12.935,
+    "longitude":77.697,
+    "number_of_roads":4,
+    "junction_type":"Signalized",
+    "priority_level":"Low"
+  },
+  {
+    "junction_id":"J0016",
+    "junction_name":"Madiwala Junction",
+    "latitude":12.922,
+    "longitude":77.617,
+    "number_of_roads":4,
+    "junction_type":"Roundabout",
+    "priority_level":"Medium"
+  },
+  {
+    "junction_id":"J0017",
+    "junction_name":"Mysore Road Junction",
+    "latitude":12.955,
+    "longitude":77.535,
+    "number_of_roads":3,
+    "junction_type":"Uncontrolled",
+    "priority_level":"Medium"
+  },
+  {
+    "junction_id":"J0018",
+    "junction_name":"Yelahanka Junction",
+    "latitude":13.1007,
+    "longitude":77.5963,
+    "number_of_roads":3,
+    "junction_type":"Roundabout",
+    "priority_level":"Medium"
+  },
+  {
+    "junction_id":"J0019",
+    "junction_name":"RT Nagar Circle",
+    "latitude":13.0198,
+    "longitude":77.595,
+    "number_of_roads":8,
+    "junction_type":"Uncontrolled",
+    "priority_level":"Low"
+  },
+  {
+    "junction_id":"J0020",
+    "junction_name":"Basaveshwara Circle",
+    "latitude":12.9862,
+    "longitude":77.572,
+    "number_of_roads":3,
+    "junction_type":"Flyover",
+    "priority_level":"Medium"
+  },
+  {
+    "junction_id":"J0021",
+    "junction_name":"Koramangala Junction",
+    "latitude":12.9352,
+    "longitude":77.6146,
+    "number_of_roads":4,
+    "junction_type":"Signalized",
+    "priority_level":"Medium"
+  },
+  {
+    "junction_id":"J0022",
+    "junction_name":"Indiranagar Junction",
+    "latitude":12.9719,
+    "longitude":77.6412,
+    "number_of_roads":2,
+    "junction_type":"Roundabout",
+    "priority_level":"Medium"
+  },
+  {
+    "junction_id":"J0023",
+    "junction_name":"Whitefield Junction",
+    "latitude":12.9698,
+    "longitude":77.75,
+    "number_of_roads":2,
+    "junction_type":"Uncontrolled",
+    "priority_level":"High"
+  },
+  {
+    "junction_id":"J0024",
+    "junction_name":"Banashankari Junction",
+    "latitude":12.925,
+    "longitude":77.547,
+    "number_of_roads":3,
+    "junction_type":"Flyover",
+    "priority_level":"Medium"
+  },
+  {
+    "junction_id":"J0025",
+    "junction_name":"Jayanagar Junction",
+    "latitude":12.925,
+    "longitude":77.583,
+    "number_of_roads":4,
+    "junction_type":"Flyover",
+    "priority_level":"Low"
+  },
+  {
+    "junction_id":"J0026",
+    "junction_name":"Vijayanagar Junction",
+    "latitude":12.9707,
+    "longitude":77.535,
+    "number_of_roads":4,
+    "junction_type":"Roundabout",
+    "priority_level":"Low"
+  },
+  {
+    "junction_id":"J0027",
+    "junction_name":"Malleshwaram Circle",
+    "latitude":13.0031,
+    "longitude":77.573,
+    "number_of_roads":1,
+    "junction_type":"Roundabout",
+    "priority_level":"Low"
+  },
+  {
+    "junction_id":"J0028",
+    "junction_name":"Rajajinagar Circle",
+    "latitude":12.9911,
+    "longitude":77.5554,
+    "number_of_roads":2,
+    "junction_type":"Flyover",
+    "priority_level":"Low"
+  },
+  {
+    "junction_id":"J0029",
+    "junction_name":"HSR Layout Junction",
+    "latitude":12.9116,
+    "longitude":77.6389,
+    "number_of_roads":4,
+    "junction_type":"Signalized",
+    "priority_level":"Medium"
+  },
+  {
+    "junction_id":"J0030",
+    "junction_name":"Nagawara Junction",
+    "latitude":13.04,
+    "longitude":77.622,
+    "number_of_roads":2,
+    "junction_type":"Signalized",
+    "priority_level":"Low"
+  }
+]

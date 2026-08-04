@@ -1,0 +1,34 @@
+# Computer Vision
+ultralytics==8.3.40          # YOLOv11
+opencv-python==4.10.0.84
+
+# Deep Learning (LSTM, etc.)
+torch==2.5.1
+torchvision==0.20.1
+
+# Traditional ML
+xgboost==2.1.3
+scikit-learn==1.6.0
+
+# Data Handling
+pandas==2.2.3
+numpy==1.26.4
+scipy==1.14.1
+
+# Geospatial (digital twin)
+geopandas==1.0.1
+shapely==2.0.6
+networkx==3.4.2
+osmnx==1.9.4                 # For OSM import (if used directly)
+
+# Explainability
+shap==0.46.0
+lime==0.2.0.1
+
+# Model Serialisation
+joblib==1.4.2
+h5py==3.12.1
+
+# Utilities
+tqdm==4.67.1
+pyyaml==6.0.2

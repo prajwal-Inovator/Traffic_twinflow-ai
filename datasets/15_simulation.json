@@ -1,0 +1,542 @@
+[
+  {
+    "simulation_id":"SIM0001",
+    "scenario":"Combined Strategy",
+    "road_id":"R0043",
+    "traffic_reduction_pct":10.9,
+    "fuel_saved_l":159.0,
+    "delay_reduced_min":9.2,
+    "recommendation":"Apply 'Combined Strategy' on R0043 \u2014 projected 10.9% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0002",
+    "scenario":"Signal Timing Change",
+    "road_id":"R0015",
+    "traffic_reduction_pct":32.3,
+    "fuel_saved_l":279.6,
+    "delay_reduced_min":11.2,
+    "recommendation":"Apply 'Signal Timing Change' on R0015 \u2014 projected 32.3% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0003",
+    "scenario":"Signal Timing Change",
+    "road_id":"R0043",
+    "traffic_reduction_pct":11.6,
+    "fuel_saved_l":128.3,
+    "delay_reduced_min":4.1,
+    "recommendation":"Apply 'Signal Timing Change' on R0043 \u2014 projected 11.6% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0004",
+    "scenario":"Vehicle Diversion",
+    "road_id":"R0047",
+    "traffic_reduction_pct":16.0,
+    "fuel_saved_l":240.8,
+    "delay_reduced_min":10.4,
+    "recommendation":"Apply 'Vehicle Diversion' on R0047 \u2014 projected 16.0% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0005",
+    "scenario":"Vehicle Diversion",
+    "road_id":"R0003",
+    "traffic_reduction_pct":20.8,
+    "fuel_saved_l":250.9,
+    "delay_reduced_min":15.1,
+    "recommendation":"Apply 'Vehicle Diversion' on R0003 \u2014 projected 20.8% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0006",
+    "scenario":"Bus Priority",
+    "road_id":"R0033",
+    "traffic_reduction_pct":29.6,
+    "fuel_saved_l":359.8,
+    "delay_reduced_min":10.4,
+    "recommendation":"Apply 'Bus Priority' on R0033 \u2014 projected 29.6% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0007",
+    "scenario":"Signal Timing Change",
+    "road_id":"R0021",
+    "traffic_reduction_pct":13.2,
+    "fuel_saved_l":127.4,
+    "delay_reduced_min":7.7,
+    "recommendation":"Apply 'Signal Timing Change' on R0021 \u2014 projected 13.2% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0008",
+    "scenario":"Emergency Corridor",
+    "road_id":"R0036",
+    "traffic_reduction_pct":8.8,
+    "fuel_saved_l":119.3,
+    "delay_reduced_min":3.8,
+    "recommendation":"Apply 'Emergency Corridor' on R0036 \u2014 projected 8.8% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0009",
+    "scenario":"Combined Strategy",
+    "road_id":"R0013",
+    "traffic_reduction_pct":26.9,
+    "fuel_saved_l":224.1,
+    "delay_reduced_min":17.0,
+    "recommendation":"Apply 'Combined Strategy' on R0013 \u2014 projected 26.9% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0010",
+    "scenario":"Heavy Vehicle Restriction",
+    "road_id":"R0014",
+    "traffic_reduction_pct":9.3,
+    "fuel_saved_l":74.5,
+    "delay_reduced_min":7.6,
+    "recommendation":"Apply 'Heavy Vehicle Restriction' on R0014 \u2014 projected 9.3% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0011",
+    "scenario":"Heavy Vehicle Restriction",
+    "road_id":"R0026",
+    "traffic_reduction_pct":24.8,
+    "fuel_saved_l":227.8,
+    "delay_reduced_min":17.3,
+    "recommendation":"Apply 'Heavy Vehicle Restriction' on R0026 \u2014 projected 24.8% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0012",
+    "scenario":"Bus Priority",
+    "road_id":"R0008",
+    "traffic_reduction_pct":23.0,
+    "fuel_saved_l":314.6,
+    "delay_reduced_min":12.7,
+    "recommendation":"Apply 'Bus Priority' on R0008 \u2014 projected 23.0% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0013",
+    "scenario":"Vehicle Diversion",
+    "road_id":"R0014",
+    "traffic_reduction_pct":31.5,
+    "fuel_saved_l":344.7,
+    "delay_reduced_min":17.0,
+    "recommendation":"Apply 'Vehicle Diversion' on R0014 \u2014 projected 31.5% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0014",
+    "scenario":"Signal Timing Change",
+    "road_id":"R0023",
+    "traffic_reduction_pct":14.2,
+    "fuel_saved_l":245.0,
+    "delay_reduced_min":12.1,
+    "recommendation":"Apply 'Signal Timing Change' on R0023 \u2014 projected 14.2% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0015",
+    "scenario":"Emergency Corridor",
+    "road_id":"R0012",
+    "traffic_reduction_pct":30.3,
+    "fuel_saved_l":532.4,
+    "delay_reduced_min":27.0,
+    "recommendation":"Apply 'Emergency Corridor' on R0012 \u2014 projected 30.3% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0016",
+    "scenario":"Signal Timing Change",
+    "road_id":"R0026",
+    "traffic_reduction_pct":25.6,
+    "fuel_saved_l":435.5,
+    "delay_reduced_min":22.8,
+    "recommendation":"Apply 'Signal Timing Change' on R0026 \u2014 projected 25.6% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0017",
+    "scenario":"Combined Strategy",
+    "road_id":"R0021",
+    "traffic_reduction_pct":4.2,
+    "fuel_saved_l":65.6,
+    "delay_reduced_min":3.1,
+    "recommendation":"Apply 'Combined Strategy' on R0021 \u2014 projected 4.2% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0018",
+    "scenario":"Signal Timing Change",
+    "road_id":"R0025",
+    "traffic_reduction_pct":32.5,
+    "fuel_saved_l":604.7,
+    "delay_reduced_min":26.2,
+    "recommendation":"Apply 'Signal Timing Change' on R0025 \u2014 projected 32.5% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0019",
+    "scenario":"Vehicle Diversion",
+    "road_id":"R0030",
+    "traffic_reduction_pct":33.3,
+    "fuel_saved_l":481.1,
+    "delay_reduced_min":10.1,
+    "recommendation":"Apply 'Vehicle Diversion' on R0030 \u2014 projected 33.3% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0020",
+    "scenario":"Vehicle Diversion",
+    "road_id":"R0005",
+    "traffic_reduction_pct":4.3,
+    "fuel_saved_l":62.5,
+    "delay_reduced_min":2.4,
+    "recommendation":"Apply 'Vehicle Diversion' on R0005 \u2014 projected 4.3% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0021",
+    "scenario":"Combined Strategy",
+    "road_id":"R0018",
+    "traffic_reduction_pct":18.0,
+    "fuel_saved_l":230.5,
+    "delay_reduced_min":15.3,
+    "recommendation":"Apply 'Combined Strategy' on R0018 \u2014 projected 18.0% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0022",
+    "scenario":"Combined Strategy",
+    "road_id":"R0040",
+    "traffic_reduction_pct":15.1,
+    "fuel_saved_l":275.9,
+    "delay_reduced_min":12.7,
+    "recommendation":"Apply 'Combined Strategy' on R0040 \u2014 projected 15.1% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0023",
+    "scenario":"Emergency Corridor",
+    "road_id":"R0003",
+    "traffic_reduction_pct":19.5,
+    "fuel_saved_l":260.6,
+    "delay_reduced_min":14.8,
+    "recommendation":"Apply 'Emergency Corridor' on R0003 \u2014 projected 19.5% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0024",
+    "scenario":"Signal Timing Change",
+    "road_id":"R0014",
+    "traffic_reduction_pct":25.9,
+    "fuel_saved_l":309.3,
+    "delay_reduced_min":9.4,
+    "recommendation":"Apply 'Signal Timing Change' on R0014 \u2014 projected 25.9% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0025",
+    "scenario":"Bus Priority",
+    "road_id":"R0020",
+    "traffic_reduction_pct":12.2,
+    "fuel_saved_l":116.8,
+    "delay_reduced_min":5.8,
+    "recommendation":"Apply 'Bus Priority' on R0020 \u2014 projected 12.2% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0026",
+    "scenario":"Heavy Vehicle Restriction",
+    "road_id":"R0032",
+    "traffic_reduction_pct":12.1,
+    "fuel_saved_l":189.4,
+    "delay_reduced_min":10.6,
+    "recommendation":"Apply 'Heavy Vehicle Restriction' on R0032 \u2014 projected 12.1% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0027",
+    "scenario":"Signal Timing Change",
+    "road_id":"R0046",
+    "traffic_reduction_pct":25.3,
+    "fuel_saved_l":483.7,
+    "delay_reduced_min":19.5,
+    "recommendation":"Apply 'Signal Timing Change' on R0046 \u2014 projected 25.3% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0028",
+    "scenario":"Heavy Vehicle Restriction",
+    "road_id":"R0037",
+    "traffic_reduction_pct":26.6,
+    "fuel_saved_l":345.0,
+    "delay_reduced_min":13.2,
+    "recommendation":"Apply 'Heavy Vehicle Restriction' on R0037 \u2014 projected 26.6% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0029",
+    "scenario":"Vehicle Diversion",
+    "road_id":"R0017",
+    "traffic_reduction_pct":30.2,
+    "fuel_saved_l":569.7,
+    "delay_reduced_min":17.2,
+    "recommendation":"Apply 'Vehicle Diversion' on R0017 \u2014 projected 30.2% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0030",
+    "scenario":"Signal Timing Change",
+    "road_id":"R0039",
+    "traffic_reduction_pct":4.3,
+    "fuel_saved_l":75.3,
+    "delay_reduced_min":2.0,
+    "recommendation":"Apply 'Signal Timing Change' on R0039 \u2014 projected 4.3% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0031",
+    "scenario":"Emergency Corridor",
+    "road_id":"R0041",
+    "traffic_reduction_pct":4.3,
+    "fuel_saved_l":75.9,
+    "delay_reduced_min":2.6,
+    "recommendation":"Apply 'Emergency Corridor' on R0041 \u2014 projected 4.3% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0032",
+    "scenario":"Combined Strategy",
+    "road_id":"R0025",
+    "traffic_reduction_pct":25.2,
+    "fuel_saved_l":478.2,
+    "delay_reduced_min":15.7,
+    "recommendation":"Apply 'Combined Strategy' on R0025 \u2014 projected 25.2% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0033",
+    "scenario":"Combined Strategy",
+    "road_id":"R0050",
+    "traffic_reduction_pct":19.6,
+    "fuel_saved_l":225.2,
+    "delay_reduced_min":9.5,
+    "recommendation":"Apply 'Combined Strategy' on R0050 \u2014 projected 19.6% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0034",
+    "scenario":"Combined Strategy",
+    "road_id":"R0009",
+    "traffic_reduction_pct":28.7,
+    "fuel_saved_l":384.2,
+    "delay_reduced_min":11.4,
+    "recommendation":"Apply 'Combined Strategy' on R0009 \u2014 projected 28.7% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0035",
+    "scenario":"Emergency Corridor",
+    "road_id":"R0012",
+    "traffic_reduction_pct":6.9,
+    "fuel_saved_l":94.4,
+    "delay_reduced_min":4.0,
+    "recommendation":"Apply 'Emergency Corridor' on R0012 \u2014 projected 6.9% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0036",
+    "scenario":"Combined Strategy",
+    "road_id":"R0049",
+    "traffic_reduction_pct":24.3,
+    "fuel_saved_l":331.8,
+    "delay_reduced_min":9.4,
+    "recommendation":"Apply 'Combined Strategy' on R0049 \u2014 projected 24.3% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0037",
+    "scenario":"Combined Strategy",
+    "road_id":"R0021",
+    "traffic_reduction_pct":19.7,
+    "fuel_saved_l":372.0,
+    "delay_reduced_min":7.8,
+    "recommendation":"Apply 'Combined Strategy' on R0021 \u2014 projected 19.7% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0038",
+    "scenario":"Combined Strategy",
+    "road_id":"R0031",
+    "traffic_reduction_pct":25.4,
+    "fuel_saved_l":384.2,
+    "delay_reduced_min":19.0,
+    "recommendation":"Apply 'Combined Strategy' on R0031 \u2014 projected 25.4% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0039",
+    "scenario":"Signal Timing Change",
+    "road_id":"R0022",
+    "traffic_reduction_pct":8.7,
+    "fuel_saved_l":167.9,
+    "delay_reduced_min":5.9,
+    "recommendation":"Apply 'Signal Timing Change' on R0022 \u2014 projected 8.7% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0040",
+    "scenario":"Signal Timing Change",
+    "road_id":"R0039",
+    "traffic_reduction_pct":30.3,
+    "fuel_saved_l":332.1,
+    "delay_reduced_min":22.5,
+    "recommendation":"Apply 'Signal Timing Change' on R0039 \u2014 projected 30.3% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0041",
+    "scenario":"Heavy Vehicle Restriction",
+    "road_id":"R0029",
+    "traffic_reduction_pct":28.2,
+    "fuel_saved_l":360.1,
+    "delay_reduced_min":15.0,
+    "recommendation":"Apply 'Heavy Vehicle Restriction' on R0029 \u2014 projected 28.2% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0042",
+    "scenario":"Bus Priority",
+    "road_id":"R0033",
+    "traffic_reduction_pct":24.4,
+    "fuel_saved_l":222.5,
+    "delay_reduced_min":18.1,
+    "recommendation":"Apply 'Bus Priority' on R0033 \u2014 projected 24.4% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0043",
+    "scenario":"Combined Strategy",
+    "road_id":"R0048",
+    "traffic_reduction_pct":5.3,
+    "fuel_saved_l":54.5,
+    "delay_reduced_min":3.7,
+    "recommendation":"Apply 'Combined Strategy' on R0048 \u2014 projected 5.3% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0044",
+    "scenario":"Vehicle Diversion",
+    "road_id":"R0033",
+    "traffic_reduction_pct":7.0,
+    "fuel_saved_l":137.6,
+    "delay_reduced_min":5.7,
+    "recommendation":"Apply 'Vehicle Diversion' on R0033 \u2014 projected 7.0% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0045",
+    "scenario":"Heavy Vehicle Restriction",
+    "road_id":"R0046",
+    "traffic_reduction_pct":23.4,
+    "fuel_saved_l":417.2,
+    "delay_reduced_min":19.5,
+    "recommendation":"Apply 'Heavy Vehicle Restriction' on R0046 \u2014 projected 23.4% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0046",
+    "scenario":"Signal Timing Change",
+    "road_id":"R0015",
+    "traffic_reduction_pct":12.0,
+    "fuel_saved_l":218.3,
+    "delay_reduced_min":5.0,
+    "recommendation":"Apply 'Signal Timing Change' on R0015 \u2014 projected 12.0% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0047",
+    "scenario":"Signal Timing Change",
+    "road_id":"R0040",
+    "traffic_reduction_pct":16.8,
+    "fuel_saved_l":246.9,
+    "delay_reduced_min":12.2,
+    "recommendation":"Apply 'Signal Timing Change' on R0040 \u2014 projected 16.8% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0048",
+    "scenario":"Signal Timing Change",
+    "road_id":"R0020",
+    "traffic_reduction_pct":4.9,
+    "fuel_saved_l":56.3,
+    "delay_reduced_min":3.3,
+    "recommendation":"Apply 'Signal Timing Change' on R0020 \u2014 projected 4.9% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0049",
+    "scenario":"Vehicle Diversion",
+    "road_id":"R0048",
+    "traffic_reduction_pct":15.1,
+    "fuel_saved_l":261.2,
+    "delay_reduced_min":10.4,
+    "recommendation":"Apply 'Vehicle Diversion' on R0048 \u2014 projected 15.1% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0050",
+    "scenario":"Bus Priority",
+    "road_id":"R0049",
+    "traffic_reduction_pct":11.3,
+    "fuel_saved_l":110.2,
+    "delay_reduced_min":7.7,
+    "recommendation":"Apply 'Bus Priority' on R0049 \u2014 projected 11.3% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0051",
+    "scenario":"Vehicle Diversion",
+    "road_id":"R0040",
+    "traffic_reduction_pct":18.0,
+    "fuel_saved_l":180.5,
+    "delay_reduced_min":8.9,
+    "recommendation":"Apply 'Vehicle Diversion' on R0040 \u2014 projected 18.0% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0052",
+    "scenario":"Signal Timing Change",
+    "road_id":"R0004",
+    "traffic_reduction_pct":13.4,
+    "fuel_saved_l":124.6,
+    "delay_reduced_min":8.4,
+    "recommendation":"Apply 'Signal Timing Change' on R0004 \u2014 projected 13.4% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0053",
+    "scenario":"Vehicle Diversion",
+    "road_id":"R0024",
+    "traffic_reduction_pct":27.7,
+    "fuel_saved_l":412.9,
+    "delay_reduced_min":22.0,
+    "recommendation":"Apply 'Vehicle Diversion' on R0024 \u2014 projected 27.7% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0054",
+    "scenario":"Bus Priority",
+    "road_id":"R0019",
+    "traffic_reduction_pct":8.0,
+    "fuel_saved_l":105.8,
+    "delay_reduced_min":5.3,
+    "recommendation":"Apply 'Bus Priority' on R0019 \u2014 projected 8.0% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0055",
+    "scenario":"Vehicle Diversion",
+    "road_id":"R0010",
+    "traffic_reduction_pct":25.0,
+    "fuel_saved_l":408.7,
+    "delay_reduced_min":18.4,
+    "recommendation":"Apply 'Vehicle Diversion' on R0010 \u2014 projected 25.0% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0056",
+    "scenario":"Bus Priority",
+    "road_id":"R0014",
+    "traffic_reduction_pct":24.2,
+    "fuel_saved_l":221.0,
+    "delay_reduced_min":17.4,
+    "recommendation":"Apply 'Bus Priority' on R0014 \u2014 projected 24.2% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0057",
+    "scenario":"Combined Strategy",
+    "road_id":"R0003",
+    "traffic_reduction_pct":26.5,
+    "fuel_saved_l":527.9,
+    "delay_reduced_min":19.0,
+    "recommendation":"Apply 'Combined Strategy' on R0003 \u2014 projected 26.5% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0058",
+    "scenario":"Vehicle Diversion",
+    "road_id":"R0047",
+    "traffic_reduction_pct":25.3,
+    "fuel_saved_l":358.7,
+    "delay_reduced_min":20.8,
+    "recommendation":"Apply 'Vehicle Diversion' on R0047 \u2014 projected 25.3% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0059",
+    "scenario":"Heavy Vehicle Restriction",
+    "road_id":"R0029",
+    "traffic_reduction_pct":34.9,
+    "fuel_saved_l":605.5,
+    "delay_reduced_min":23.3,
+    "recommendation":"Apply 'Heavy Vehicle Restriction' on R0029 \u2014 projected 34.9% congestion reduction"
+  },
+  {
+    "simulation_id":"SIM0060",
+    "scenario":"Combined Strategy",
+    "road_id":"R0022",
+    "traffic_reduction_pct":6.4,
+    "fuel_saved_l":107.0,
+    "delay_reduced_min":4.6,
+    "recommendation":"Apply 'Combined Strategy' on R0022 \u2014 projected 6.4% congestion reduction"
+  }
+]

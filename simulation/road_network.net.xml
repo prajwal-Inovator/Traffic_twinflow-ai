@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<net version="1.12" junctionCornerDetail="5" limitTurnSpeed="5.50">
+    <edge id="edge1" from="node1" to="node2" priority="1" numLanes="2" speed="13.89"/>
+    <edge id="edge2" from="node2" to="node1" priority="1" numLanes="2" speed="13.89"/>
+    <edge id="edge3" from="node3" to="node4" priority="1" numLanes="2" speed="13.89"/>
+    <edge id="edge4" from="node4" to="node3" priority="1" numLanes="2" speed="13.89"/>
+    <junction id="node1" type="priority" x="0" y="0" incLanes="edge1_0" intLanes="edge2_0"/>
+    <junction id="node2" type="priority" x="100" y="0" incLanes="edge2_0" intLanes="edge1_0"/>
+    <junction id="node3" type="priority" x="50" y="-50" incLanes="edge3_0" intLanes="edge4_0"/>
+    <junction id="node4" type="priority" x="50" y="50" incLanes="edge4_0" intLanes="edge3_0"/>
+</net>

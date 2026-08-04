@@ -1,0 +1,51 @@
+road_id,road_name,road_type,length_km,lanes,speed_limit_kmph,junction_start,junction_end,road_condition,traffic_capacity_vph,latitude,longitude
+R0001,Bellary Road (NH44) - Segment 1,Highway,2.93,2,50,J0019,J0025,Good,1760,12.972864,77.589197
+R0002,Hebbal-Yelahanka Road - Segment 1,Highway,1.69,3,40,J0006,J0025,Good,1687,12.975816,77.569232
+R0003,Bannerghatta Road - Segment 1,Local,4.23,6,40,J0023,J0019,Average,4699,12.993841,77.67344
+R0004,Whitefield Main Road - Segment 1,Ring Road,5.54,4,60,J0011,J0006,Average,2339,12.963064,77.574867
+R0005,Residency Road - Segment 1,Highway,2.53,2,60,J0008,J0019,Good,1419,12.995664,77.606932
+R0006,Bannerghatta Road - Segment 2,Arterial,4.29,3,30,J0007,J0008,Good,1667,12.973834,77.595233
+R0007,Brigade Road - Segment 1,Arterial,3.4,2,50,J0026,J0006,Good,1628,12.998949,77.544528
+R0008,Indiranagar 100 Feet Road - Segment 1,Collector,4.18,2,60,J0005,J0019,Good,1037,13.009465,77.629341
+R0009,Malleshwaram Circle Road - Segment 1,Collector,1.17,3,60,J0014,J0006,Good,2638,12.978131,77.616117
+R0010,Mysore Road - Segment 1,Arterial,2.54,2,30,J0001,J0005,Good,1078,12.958318,77.64378
+R0011,Banashankari Ring Road - Segment 1,Ring Road,1.5,6,50,J0024,J0023,Under Repair,4188,12.946469,77.649319
+R0012,Koramangala Inner Ring Road - Segment 1,Ring Road,2.28,2,60,J0016,J0006,Under Repair,1530,12.974823,77.58554
+R0013,Nagawara-Hennur Road - Segment 1,Collector,3.92,2,60,J0021,J0026,Good,1147,12.953889,77.57535
+R0014,Airport Road - Segment 1,Ring Road,6.16,3,40,J0017,J0007,Under Repair,2573,12.966046,77.553994
+R0015,Devanahalli Road - Segment 1,Ring Road,1.3,2,50,J0027,J0011,Under Repair,1156,12.95014,77.584651
+R0016,Jayanagar 4th Block Road - Segment 1,Collector,3.02,3,60,J0010,J0026,Good,1825,12.936507,77.610714
+R0017,Airport Road - Segment 2,Local,2.4,2,30,J0022,J0001,Good,1434,12.943832,77.632604
+R0018,Old Airport Road - Segment 1,Arterial,1.22,6,50,J0003,J0019,Average,5368,13.011694,77.645297
+R0019,Yeshwanthpur Ring Road - Segment 1,Ring Road,0.83,2,100,J0030,J0026,Average,1652,13.005764,77.578958
+R0020,Whitefield Main Road - Segment 2,Collector,5.2,4,30,J0029,J0019,Good,2118,12.965417,77.616182
+R0021,Hosur Road - Segment 1,Ring Road,5.72,2,40,J0018,J0001,Average,1498,13.008612,77.608677
+R0022,Banashankari Ring Road - Segment 2,Ring Road,2.57,2,100,J0015,J0016,Under Repair,1260,12.928959,77.657275
+R0023,MG Road - Segment 1,Local,5.86,2,30,J0002,J0005,Average,1377,12.977039,77.683476
+R0024,Kanakapura Road - Segment 1,Highway,5.14,2,50,J0009,J0006,Good,1449,12.995292,77.596338
+R0025,Outer Ring Road - Segment 1,Ring Road,3.78,2,60,J0020,J0007,Average,1342,12.980501,77.570866
+R0026,Mysore Road - Segment 2,Highway,0.98,2,40,J0028,J0003,Good,1509,12.996429,77.626117
+R0027,Indiranagar 100 Feet Road - Segment 2,Arterial,5.97,3,30,J0012,J0015,Good,1799,12.889921,77.679111
+R0028,Old Madras Road - Segment 1,Arterial,2.1,3,30,J0004,J0001,Average,1592,12.97593,77.609222
+R0029,Hebbal-Yelahanka Road - Segment 2,Collector,6.1,4,50,J0013,J0007,Good,3292,12.956117,77.628893
+R0030,CMH Road - Segment 1,Highway,5.38,3,40,J0021,J0016,Poor,1723,12.929385,77.615879
+R0031,Sarjapur Road - Segment 1,Local,5.4,3,50,J0013,J0029,Good,2575,12.922936,77.66117
+R0032,Residency Road - Segment 2,Arterial,2.1,6,50,J0030,J0021,Average,4025,12.988236,77.619021
+R0033,Hosur Road - Segment 2,Local,0.84,2,30,J0015,J0005,Good,1408,12.966685,77.680444
+R0034,Koramangala Inner Ring Road - Segment 2,Ring Road,1.48,2,100,J0009,J0005,Good,1270,12.980786,77.651496
+R0035,Tumkur Road - Segment 1,Highway,3.76,2,40,J0008,J0024,Average,1562,12.948127,77.584294
+R0036,Magadi Road - Segment 1,Arterial,6.29,4,30,J0018,J0009,Average,2402,13.030894,77.617102
+R0037,Old Airport Road - Segment 2,Arterial,2.42,6,50,J0024,J0019,Good,3088,12.972619,77.571005
+R0038,Bannerghatta Road - Segment 3,Highway,1.09,2,40,J0014,J0029,Good,1222,12.919617,77.657429
+R0039,Bellary Road (NH44) - Segment 2,Highway,1.63,2,100,J0019,J0013,Average,1391,12.978371,77.639484
+R0040,Devanahalli Road - Segment 2,Arterial,4.63,6,30,J0012,J0008,Good,4827,12.907975,77.640406
+R0041,Old Airport Road - Segment 3,Local,2.9,2,40,J0005,J0017,Under Repair,1505,12.977117,77.600072
+R0042,Outer Ring Road - Segment 2,Ring Road,1.31,2,100,J0016,J0003,Poor,1668,12.961892,77.656273
+R0043,Hebbal-Yelahanka Road - Segment 3,Arterial,1.03,4,40,J0025,J0002,Good,2945,12.941305,77.641083
+R0044,Old Madras Road - Segment 2,Highway,3.72,3,30,J0028,J0004,Good,1771,13.01359,77.575549
+R0045,Kanakapura Road - Segment 2,Highway,4.74,2,30,J0005,J0021,Average,1309,12.967823,77.639075
+R0046,Banashankari Ring Road - Segment 3,Ring Road,2.74,4,80,J0020,J0003,Poor,2181,12.995199,77.635155
+R0047,Sarjapur Road - Segment 2,Collector,2.27,4,40,J0013,J0020,Average,3055,12.961234,77.62861
+R0048,Indiranagar 100 Feet Road - Segment 3,Collector,3.82,2,30,J0015,J0017,Poor,1193,12.944186,77.616794
+R0049,Devanahalli Road - Segment 3,Collector,5.93,6,60,J0022,J0029,Under Repair,4519,12.941428,77.639748
+R0050,Magadi Road - Segment 2,Ring Road,4.94,3,30,J0018,J0025,Good,2576,13.013624,77.59021

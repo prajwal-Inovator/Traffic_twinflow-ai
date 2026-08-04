@@ -1,0 +1,16 @@
+hospital_id,hospital_name,latitude,longitude,ambulance_count,capacity_beds
+H001,Victoria Hospital,12.9634,77.5772,3,150
+H002,NIMHANS,12.943,77.596,3,450
+H003,Manipal Hospital (Old Airport Road),12.9584,77.6483,3,200
+H004,Fortis Hospital Bannerghatta Road,12.8896,77.5972,2,450
+H005,Apollo Hospital Bannerghatta Road,12.9008,77.5978,5,300
+H006,St. John's Medical College Hospital,12.9279,77.6238,6,600
+H007,Vydehi Institute of Medical Sciences,12.9698,77.7443,5,80
+H008,Sakra World Hospital,12.927,77.682,3,450
+H009,Narayana Health City,12.8261,77.6114,5,80
+H010,BGS Gleneagles Global Hospital,12.908,77.559,6,450
+H011,Columbia Asia Hospital Hebbal,13.043,77.596,5,80
+H012,Sparsh Hospital Yeshwanthpur,13.0217,77.546,4,250
+H013,People Tree Hospital,12.972,77.549,5,450
+H014,Bowring & Lady Curzon Hospital,12.988,77.606,6,200
+H015,Jayadeva Institute of Cardiology,12.917,77.599,5,200

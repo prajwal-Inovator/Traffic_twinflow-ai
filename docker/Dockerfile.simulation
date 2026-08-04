@@ -1,0 +1,24 @@
+# docker/Dockerfile.simulation
+
+FROM sumo/sumo:latest
+
+# SUMO base image already has sumo, traci, and Python bindings.
+# We add our wrapper scripts.
+
+WORKDIR /app
+
+# Copy our simulation Python wrapper and configuration
+COPY simulation/ .
+
+# Ensure Python dependencies (if any custom)
+# The SUMO image typically has Python 3.10+.
+RUN pip install --no-cache-dir pandas numpy xmltodict lxml
+
+# Create non‑root user
+RUN useradd -m -u 1000 appuser && chown -R appuser:appuser /app
+USER appuser
+
+EXPOSE 8002
+
+# Run the simulation service (FastAPI wrapper for TraCI)
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8002"]

@@ -1,0 +1,122 @@
+[
+  {
+    "hospital_id":"H001",
+    "hospital_name":"Victoria Hospital",
+    "latitude":12.9634,
+    "longitude":77.5772,
+    "ambulance_count":3,
+    "capacity_beds":150
+  },
+  {
+    "hospital_id":"H002",
+    "hospital_name":"NIMHANS",
+    "latitude":12.943,
+    "longitude":77.596,
+    "ambulance_count":3,
+    "capacity_beds":450
+  },
+  {
+    "hospital_id":"H003",
+    "hospital_name":"Manipal Hospital (Old Airport Road)",
+    "latitude":12.9584,
+    "longitude":77.6483,
+    "ambulance_count":3,
+    "capacity_beds":200
+  },
+  {
+    "hospital_id":"H004",
+    "hospital_name":"Fortis Hospital Bannerghatta Road",
+    "latitude":12.8896,
+    "longitude":77.5972,
+    "ambulance_count":2,
+    "capacity_beds":450
+  },
+  {
+    "hospital_id":"H005",
+    "hospital_name":"Apollo Hospital Bannerghatta Road",
+    "latitude":12.9008,
+    "longitude":77.5978,
+    "ambulance_count":5,
+    "capacity_beds":300
+  },
+  {
+    "hospital_id":"H006",
+    "hospital_name":"St. John's Medical College Hospital",
+    "latitude":12.9279,
+    "longitude":77.6238,
+    "ambulance_count":6,
+    "capacity_beds":600
+  },
+  {
+    "hospital_id":"H007",
+    "hospital_name":"Vydehi Institute of Medical Sciences",
+    "latitude":12.9698,
+    "longitude":77.7443,
+    "ambulance_count":5,
+    "capacity_beds":80
+  },
+  {
+    "hospital_id":"H008",
+    "hospital_name":"Sakra World Hospital",
+    "latitude":12.927,
+    "longitude":77.682,
+    "ambulance_count":3,
+    "capacity_beds":450
+  },
+  {
+    "hospital_id":"H009",
+    "hospital_name":"Narayana Health City",
+    "latitude":12.8261,
+    "longitude":77.6114,
+    "ambulance_count":5,
+    "capacity_beds":80
+  },
+  {
+    "hospital_id":"H010",
+    "hospital_name":"BGS Gleneagles Global Hospital",
+    "latitude":12.908,
+    "longitude":77.559,
+    "ambulance_count":6,
+    "capacity_beds":450
+  },
+  {
+    "hospital_id":"H011",
+    "hospital_name":"Columbia Asia Hospital Hebbal",
+    "latitude":13.043,
+    "longitude":77.596,
+    "ambulance_count":5,
+    "capacity_beds":80
+  },
+  {
+    "hospital_id":"H012",
+    "hospital_name":"Sparsh Hospital Yeshwanthpur",
+    "latitude":13.0217,
+    "longitude":77.546,
+    "ambulance_count":4,
+    "capacity_beds":250
+  },
+  {
+    "hospital_id":"H013",
+    "hospital_name":"People Tree Hospital",
+    "latitude":12.972,
+    "longitude":77.549,
+    "ambulance_count":5,
+    "capacity_beds":450
+  },
+  {
+    "hospital_id":"H014",
+    "hospital_name":"Bowring & Lady Curzon Hospital",
+    "latitude":12.988,
+    "longitude":77.606,
+    "ambulance_count":6,
+    "capacity_beds":200
+  },
+  {
+    "hospital_id":"H015",
+    "hospital_name":"Jayadeva Institute of Cardiology",
+    "latitude":12.917,
+    "longitude":77.599,
+    "ambulance_count":5,
+    "capacity_beds":200
+  }
+]

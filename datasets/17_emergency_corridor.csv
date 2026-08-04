@@ -1,0 +1,12 @@
+corridor_id,ambulance_id,road_id,priority,signals_modified,estimated_time_saved_min
+COR0003,AMB0003,R0025,Critical,4,6.3
+COR0004,AMB0004,R0013,Critical,1,2.2
+COR0005,AMB0005,R0017,Critical,2,3.8
+COR0008,AMB0008,R0005,Critical,2,3.9
+COR0013,AMB0013,R0039,Critical,3,4.7
+COR0015,AMB0015,R0026,Critical,1,1.6
+COR0016,AMB0016,R0044,Critical,4,8.6
+COR0017,AMB0017,R0023,Critical,1,2.2
+COR0024,AMB0024,R0029,Critical,1,2.2
+COR0026,AMB0026,R0050,Critical,2,3.4
+COR0028,AMB0028,R0013,Critical,4,6.5

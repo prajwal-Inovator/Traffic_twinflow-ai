@@ -1,0 +1,38 @@
+[
+  {
+    "email": "admin@twinflow.ai",
+    "full_name": "System Administrator",
+    "role": "admin",
+    "is_active": true,
+    "hashed_password": "$2b$12$...",  
+    "created_at": { "$date": "2026-01-01T00:00:00Z" },
+    "updated_at": { "$date": "2026-01-01T00:00:00Z" }
+  },
+  {
+    "email": "authority@city.gov",
+    "full_name": "City Authority",
+    "role": "authority",
+    "is_active": true,
+    "hashed_password": "$2b$12$...",
+    "created_at": { "$date": "2026-01-01T00:00:00Z" },
+    "updated_at": { "$date": "2026-01-01T00:00:00Z" }
+  },
+  {
+    "email": "driver1@example.com",
+    "full_name": "Driver One",
+    "role": "driver",
+    "is_active": true,
+    "hashed_password": "$2b$12$...",
+    "created_at": { "$date": "2026-01-01T00:00:00Z" },
+    "updated_at": { "$date": "2026-01-01T00:00:00Z" }
+  },
+  {
+    "email": "emergency@fire.gov",
+    "full_name": "Emergency Services",
+    "role": "emergency",
+    "is_active": true,
+    "hashed_password": "$2b$12$...",
+    "created_at": { "$date": "2026-01-01T00:00:00Z" },
+    "updated_at": { "$date": "2026-01-01T00:00:00Z" }
+  }
+]

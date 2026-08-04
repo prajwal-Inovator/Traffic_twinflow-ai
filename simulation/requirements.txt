@@ -1,0 +1,5 @@
+pandas==2.2.3
+numpy==1.26.4
+xmltodict==0.13.0            # Parse SUMO .net.xml / .rou.xml
+lxml==5.3.0                  # Faster XML handling
+traci==1.20.0                # Official SUMO TraCI Python bindings (installed with SUMO)

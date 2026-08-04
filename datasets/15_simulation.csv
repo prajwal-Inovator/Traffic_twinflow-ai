@@ -1,0 +1,61 @@
+simulation_id,scenario,road_id,traffic_reduction_pct,fuel_saved_l,delay_reduced_min,recommendation
+SIM0001,Combined Strategy,R0043,10.9,159.0,9.2,Apply 'Combined Strategy' on R0043 — projected 10.9% congestion reduction
+SIM0002,Signal Timing Change,R0015,32.3,279.6,11.2,Apply 'Signal Timing Change' on R0015 — projected 32.3% congestion reduction
+SIM0003,Signal Timing Change,R0043,11.6,128.3,4.1,Apply 'Signal Timing Change' on R0043 — projected 11.6% congestion reduction
+SIM0004,Vehicle Diversion,R0047,16.0,240.8,10.4,Apply 'Vehicle Diversion' on R0047 — projected 16.0% congestion reduction
+SIM0005,Vehicle Diversion,R0003,20.8,250.9,15.1,Apply 'Vehicle Diversion' on R0003 — projected 20.8% congestion reduction
+SIM0006,Bus Priority,R0033,29.6,359.8,10.4,Apply 'Bus Priority' on R0033 — projected 29.6% congestion reduction
+SIM0007,Signal Timing Change,R0021,13.2,127.4,7.7,Apply 'Signal Timing Change' on R0021 — projected 13.2% congestion reduction
+SIM0008,Emergency Corridor,R0036,8.8,119.3,3.8,Apply 'Emergency Corridor' on R0036 — projected 8.8% congestion reduction
+SIM0009,Combined Strategy,R0013,26.9,224.1,17.0,Apply 'Combined Strategy' on R0013 — projected 26.9% congestion reduction
+SIM0010,Heavy Vehicle Restriction,R0014,9.3,74.5,7.6,Apply 'Heavy Vehicle Restriction' on R0014 — projected 9.3% congestion reduction
+SIM0011,Heavy Vehicle Restriction,R0026,24.8,227.8,17.3,Apply 'Heavy Vehicle Restriction' on R0026 — projected 24.8% congestion reduction
+SIM0012,Bus Priority,R0008,23.0,314.6,12.7,Apply 'Bus Priority' on R0008 — projected 23.0% congestion reduction
+SIM0013,Vehicle Diversion,R0014,31.5,344.7,17.0,Apply 'Vehicle Diversion' on R0014 — projected 31.5% congestion reduction
+SIM0014,Signal Timing Change,R0023,14.2,245.0,12.1,Apply 'Signal Timing Change' on R0023 — projected 14.2% congestion reduction
+SIM0015,Emergency Corridor,R0012,30.3,532.4,27.0,Apply 'Emergency Corridor' on R0012 — projected 30.3% congestion reduction
+SIM0016,Signal Timing Change,R0026,25.6,435.5,22.8,Apply 'Signal Timing Change' on R0026 — projected 25.6% congestion reduction
+SIM0017,Combined Strategy,R0021,4.2,65.6,3.1,Apply 'Combined Strategy' on R0021 — projected 4.2% congestion reduction
+SIM0018,Signal Timing Change,R0025,32.5,604.7,26.2,Apply 'Signal Timing Change' on R0025 — projected 32.5% congestion reduction
+SIM0019,Vehicle Diversion,R0030,33.3,481.1,10.1,Apply 'Vehicle Diversion' on R0030 — projected 33.3% congestion reduction
+SIM0020,Vehicle Diversion,R0005,4.3,62.5,2.4,Apply 'Vehicle Diversion' on R0005 — projected 4.3% congestion reduction
+SIM0021,Combined Strategy,R0018,18.0,230.5,15.3,Apply 'Combined Strategy' on R0018 — projected 18.0% congestion reduction
+SIM0022,Combined Strategy,R0040,15.1,275.9,12.7,Apply 'Combined Strategy' on R0040 — projected 15.1% congestion reduction
+SIM0023,Emergency Corridor,R0003,19.5,260.6,14.8,Apply 'Emergency Corridor' on R0003 — projected 19.5% congestion reduction
+SIM0024,Signal Timing Change,R0014,25.9,309.3,9.4,Apply 'Signal Timing Change' on R0014 — projected 25.9% congestion reduction
+SIM0025,Bus Priority,R0020,12.2,116.8,5.8,Apply 'Bus Priority' on R0020 — projected 12.2% congestion reduction
+SIM0026,Heavy Vehicle Restriction,R0032,12.1,189.4,10.6,Apply 'Heavy Vehicle Restriction' on R0032 — projected 12.1% congestion reduction
+SIM0027,Signal Timing Change,R0046,25.3,483.7,19.5,Apply 'Signal Timing Change' on R0046 — projected 25.3% congestion reduction
+SIM0028,Heavy Vehicle Restriction,R0037,26.6,345.0,13.2,Apply 'Heavy Vehicle Restriction' on R0037 — projected 26.6% congestion reduction
+SIM0029,Vehicle Diversion,R0017,30.2,569.7,17.2,Apply 'Vehicle Diversion' on R0017 — projected 30.2% congestion reduction
+SIM0030,Signal Timing Change,R0039,4.3,75.3,2.0,Apply 'Signal Timing Change' on R0039 — projected 4.3% congestion reduction
+SIM0031,Emergency Corridor,R0041,4.3,75.9,2.6,Apply 'Emergency Corridor' on R0041 — projected 4.3% congestion reduction
+SIM0032,Combined Strategy,R0025,25.2,478.2,15.7,Apply 'Combined Strategy' on R0025 — projected 25.2% congestion reduction
+SIM0033,Combined Strategy,R0050,19.6,225.2,9.5,Apply 'Combined Strategy' on R0050 — projected 19.6% congestion reduction
+SIM0034,Combined Strategy,R0009,28.7,384.2,11.4,Apply 'Combined Strategy' on R0009 — projected 28.7% congestion reduction
+SIM0035,Emergency Corridor,R0012,6.9,94.4,4.0,Apply 'Emergency Corridor' on R0012 — projected 6.9% congestion reduction
+SIM0036,Combined Strategy,R0049,24.3,331.8,9.4,Apply 'Combined Strategy' on R0049 — projected 24.3% congestion reduction
+SIM0037,Combined Strategy,R0021,19.7,372.0,7.8,Apply 'Combined Strategy' on R0021 — projected 19.7% congestion reduction
+SIM0038,Combined Strategy,R0031,25.4,384.2,19.0,Apply 'Combined Strategy' on R0031 — projected 25.4% congestion reduction
+SIM0039,Signal Timing Change,R0022,8.7,167.9,5.9,Apply 'Signal Timing Change' on R0022 — projected 8.7% congestion reduction
+SIM0040,Signal Timing Change,R0039,30.3,332.1,22.5,Apply 'Signal Timing Change' on R0039 — projected 30.3% congestion reduction
+SIM0041,Heavy Vehicle Restriction,R0029,28.2,360.1,15.0,Apply 'Heavy Vehicle Restriction' on R0029 — projected 28.2% congestion reduction
+SIM0042,Bus Priority,R0033,24.4,222.5,18.1,Apply 'Bus Priority' on R0033 — projected 24.4% congestion reduction
+SIM0043,Combined Strategy,R0048,5.3,54.5,3.7,Apply 'Combined Strategy' on R0048 — projected 5.3% congestion reduction
+SIM0044,Vehicle Diversion,R0033,7.0,137.6,5.7,Apply 'Vehicle Diversion' on R0033 — projected 7.0% congestion reduction
+SIM0045,Heavy Vehicle Restriction,R0046,23.4,417.2,19.5,Apply 'Heavy Vehicle Restriction' on R0046 — projected 23.4% congestion reduction
+SIM0046,Signal Timing Change,R0015,12.0,218.3,5.0,Apply 'Signal Timing Change' on R0015 — projected 12.0% congestion reduction
+SIM0047,Signal Timing Change,R0040,16.8,246.9,12.2,Apply 'Signal Timing Change' on R0040 — projected 16.8% congestion reduction
+SIM0048,Signal Timing Change,R0020,4.9,56.3,3.3,Apply 'Signal Timing Change' on R0020 — projected 4.9% congestion reduction
+SIM0049,Vehicle Diversion,R0048,15.1,261.2,10.4,Apply 'Vehicle Diversion' on R0048 — projected 15.1% congestion reduction
+SIM0050,Bus Priority,R0049,11.3,110.2,7.7,Apply 'Bus Priority' on R0049 — projected 11.3% congestion reduction
+SIM0051,Vehicle Diversion,R0040,18.0,180.5,8.9,Apply 'Vehicle Diversion' on R0040 — projected 18.0% congestion reduction
+SIM0052,Signal Timing Change,R0004,13.4,124.6,8.4,Apply 'Signal Timing Change' on R0004 — projected 13.4% congestion reduction
+SIM0053,Vehicle Diversion,R0024,27.7,412.9,22.0,Apply 'Vehicle Diversion' on R0024 — projected 27.7% congestion reduction
+SIM0054,Bus Priority,R0019,8.0,105.8,5.3,Apply 'Bus Priority' on R0019 — projected 8.0% congestion reduction
+SIM0055,Vehicle Diversion,R0010,25.0,408.7,18.4,Apply 'Vehicle Diversion' on R0010 — projected 25.0% congestion reduction
+SIM0056,Bus Priority,R0014,24.2,221.0,17.4,Apply 'Bus Priority' on R0014 — projected 24.2% congestion reduction
+SIM0057,Combined Strategy,R0003,26.5,527.9,19.0,Apply 'Combined Strategy' on R0003 — projected 26.5% congestion reduction
+SIM0058,Vehicle Diversion,R0047,25.3,358.7,20.8,Apply 'Vehicle Diversion' on R0047 — projected 25.3% congestion reduction
+SIM0059,Heavy Vehicle Restriction,R0029,34.9,605.5,23.3,Apply 'Heavy Vehicle Restriction' on R0029 — projected 34.9% congestion reduction
+SIM0060,Combined Strategy,R0022,6.4,107.0,4.6,Apply 'Combined Strategy' on R0022 — projected 6.4% congestion reduction

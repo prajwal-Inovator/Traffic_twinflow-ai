@@ -1,0 +1,31 @@
+junction_id,junction_name,latitude,longitude,number_of_roads,junction_type,priority_level
+J0001,Silk Board Junction,12.9172,77.6228,4,Signalized,High
+J0002,Marathahalli Bridge,12.9569,77.7011,2,Signalized,High
+J0003,K R Puram Junction,13.0025,77.6968,4,Flyover,High
+J0004,Hebbal Flyover,13.0355,77.597,2,Roundabout,High
+J0005,Tin Factory Junction,12.9987,77.665,7,Roundabout,Medium
+J0006,Yeshwanthpur Circle,13.0284,77.554,6,Roundabout,Medium
+J0007,Majestic (KBS) Junction,12.9767,77.5713,4,Signalized,High
+J0008,Trinity Circle,12.9718,77.6197,4,Signalized,Medium
+J0009,Domlur Flyover,12.9611,77.6387,3,Uncontrolled,Medium
+J0010,Sarjapur Junction,12.901,77.687,1,Signalized,Medium
+J0011,Bannerghatta Circle,12.899,77.597,2,Signalized,Medium
+J0012,Electronic City Toll,12.8452,77.6602,2,Signalized,High
+J0013,Iblur Junction,12.935,77.685,4,Roundabout,Medium
+J0014,Bellandur Junction,12.926,77.677,2,Roundabout,Medium
+J0015,Kadubeesanahalli Junction,12.935,77.697,4,Signalized,Low
+J0016,Madiwala Junction,12.922,77.617,4,Roundabout,Medium
+J0017,Mysore Road Junction,12.955,77.535,3,Uncontrolled,Medium
+J0018,Yelahanka Junction,13.1007,77.5963,3,Roundabout,Medium
+J0019,RT Nagar Circle,13.0198,77.595,8,Uncontrolled,Low
+J0020,Basaveshwara Circle,12.9862,77.572,3,Flyover,Medium
+J0021,Koramangala Junction,12.9352,77.6146,4,Signalized,Medium
+J0022,Indiranagar Junction,12.9719,77.6412,2,Roundabout,Medium
+J0023,Whitefield Junction,12.9698,77.75,2,Uncontrolled,High
+J0024,Banashankari Junction,12.925,77.547,3,Flyover,Medium
+J0025,Jayanagar Junction,12.925,77.583,4,Flyover,Low
+J0026,Vijayanagar Junction,12.9707,77.535,4,Roundabout,Low
+J0027,Malleshwaram Circle,13.0031,77.573,1,Roundabout,Low
+J0028,Rajajinagar Circle,12.9911,77.5554,2,Flyover,Low
+J0029,HSR Layout Junction,12.9116,77.6389,4,Signalized,Medium
+J0030,Nagawara Junction,13.04,77.622,2,Signalized,Low

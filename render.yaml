@@ -4,9 +4,9 @@ services:
   - name: twinflow-backend
     type: web
     runtime: image
-    repo: https://github.com/your-org/twinflow-ai
+    repo: https://github.com/prajwal-Inovator/Traffic_twinflow-ai
     branch: main
-    plan: professional
+    plan: starter
     dockerfilePath: docker/Dockerfile.backend
     dockerContext: .
     envVars:
@@ -49,7 +49,7 @@ services:
     runtime: image
     repo: https://github.com/prajwal-Inovator/Traffic_twinflow-ai
     branch: main
-    plan: professional
+    plan: starter
     dockerfilePath: docker/Dockerfile.ai
     dockerContext: .
     envVars:
@@ -71,7 +71,7 @@ services:
   - name: twinflow-simulation
     type: worker
     runtime: image
-    repo: https://github.com/your-org/twinflow-ai
+    repo: https://github.com/prajwal-Inovator/Traffic_twinflow-ai
     branch: main
     plan: starter
     dockerfilePath: docker/Dockerfile.simulation
@@ -88,7 +88,7 @@ services:
   - name: twinflow-frontend
     type: web
     runtime: static
-    repo: https://github.com/your-org/twinflow-ai
+    repo: https://github.com/prajwal-Inovator/Traffic_twinflow-ai
     branch: main
     buildCommand: cd frontend && npm install && npm run build
     staticPublishPath: frontend/dist

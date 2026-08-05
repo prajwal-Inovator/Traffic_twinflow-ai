@@ -73,7 +73,7 @@ services:
     repo: https://github.com/prajwal-Inovator/Traffic_twinflow-ai
     branch: main
     rootDir: frontend
-    buildCommand: npm install && npm run build
+    buildCommand: npm ci && npm run build
     staticPublishPath: dist
     envVars:
       - key: VITE_API_URL

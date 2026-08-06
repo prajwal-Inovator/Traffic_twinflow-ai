@@ -1,18 +1,8 @@
-from functools import lru_cache
-
 from fastapi import Depends, HTTPException, status
-from jose import JWTError
 
 from ..core.database import get_db
 from ..repositories.user_repo import UserRepository
 from ..services.auth_service import AuthService
-from digital_twin import TwinEngine
-
-
-@lru_cache()
-def get_twin_engine() -> TwinEngine:
-    """Singleton TwinEngine instance."""
-    return TwinEngine(config_path="digital_twin/config.yaml")
 
 
 def get_auth_service(db=Depends(get_db)) -> AuthService:
@@ -23,14 +13,13 @@ async def get_current_user(
     auth_service: AuthService = Depends(get_auth_service),
 ):
     """
-    Temporary dependency.
+    Temporary authentication dependency.
 
-    Replace this implementation with your JWT validation logic if your
-    AuthService exposes one.
+    Replace this later with JWT validation.
     """
     raise HTTPException(
         status_code=status.HTTP_501_NOT_IMPLEMENTED,
-        detail="get_current_user() is not implemented.",
+        detail="Authentication not implemented.",
     )
 
 

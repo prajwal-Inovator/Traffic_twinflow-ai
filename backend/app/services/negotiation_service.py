@@ -1,40 +1,12 @@
 # backend/app/services/negotiation_service.py
+import os
 from typing import List, Optional
 from motor.motor_asyncio import AsyncIOMotorDatabase
+
 from ..repositories.base import BaseRepository
 from ..models.negotiation import MasterRecommendation, NegotiationMessage
-from ..core.exceptions import NotFoundError
-from negotiation_engine.negotiator import Negotiator
+from .http_client import ServiceClient
 
-class NegotiationService:
-    def __init__(self, db: AsyncIOMotorDatabase):
-        self.db = db
-        self.negotiator = Negotiator()
-        # Register junctions from DB (or from digital twin)
-        # This will be done in an init method.
-
-    async def initialize(self):
-        """Register all junctions from the database."""
-        # Fetch all junctions from DB (signals collection)
-        signals = await self.signal_repo.get_many({})
-        for signal in signals:
-            jid = signal.junction_id
-            # We need neighbors; for now, we can leave empty or load from road topology
-            self.negotiator.register_junction(jid, neighbors=[])
-        # Start negotiator
-        await self.negotiator.start()
-
-    async def trigger_negotiation(self, junction_id: str) -> dict:
-        await self.negotiator.trigger_negotiation(junction_id)
-        return {"negotiation_id": f"neg_{datetime.utcnow().timestamp()}", "junction_id": junction_id}
-
-    async def get_recommendations(self, junction_id: Optional[str] = None) -> List[MasterRecommendation]:
-        if junction_id:
-            rec = self.negotiator.get_recommendation(junction_id)
-            return [rec] if rec else []
-        else:
-            # Return all recommendations
-            return list(self.negotiator.master_agent.last_recommendations.values())
 
 class NegotiationService:
     def __init__(self, db: AsyncIOMotorDatabase):
@@ -42,11 +14,26 @@ class NegotiationService:
         self.rec_repo = BaseRepository[MasterRecommendation](db, "recommendations", MasterRecommendation)
         self.msg_repo = BaseRepository[NegotiationMessage](db, "negotiation_messages", NegotiationMessage)
 
-    async def get_recommendations(self, junction_id: Optional[str] = None) -> List[MasterRecommendation]:
-        filter = {}
-        if junction_id:
-            filter["junction_id"] = junction_id
-        return await self.rec_repo.get_many(filter, limit=50)
+        self.negotiation_url = os.getenv(
+            "NEGOTIATION_SERVICE_URL",
+            "http://localhost:8003",
+        )
+        self.client = ServiceClient(
+            self.negotiation_url,
+            timeout=60,
+            service_name="Negotiation Service",
+        )
+
+    async def get_recommendations(
+        self,
+        junction_id: Optional[str] = None,
+    ) -> List[dict]:
+        params = {"junction_id": junction_id} if junction_id else None
+        return await self.client.request(
+            "GET",
+            "/recommendations",
+            params=params,
+        )
 
     async def create_recommendation(self, rec_data: dict) -> MasterRecommendation:
         return await self.rec_repo.create(rec_data)
@@ -55,8 +42,7 @@ class NegotiationService:
         return await self.msg_repo.create(msg_data)
 
     async def trigger_negotiation(self, junction_id: str) -> dict:
-        """Placeholder: triggers negotiation process."""
-        # In later steps, this will call the AI agent
-        return {"negotiation_id": f"neg_{datetime.utcnow().timestamp()}", "junction_id": junction_id}
-
-from datetime import datetime
+        return await self.client.request(
+            "POST",
+            f"/trigger/{junction_id}",
+        )

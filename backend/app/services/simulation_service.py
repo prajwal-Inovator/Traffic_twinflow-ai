@@ -2,11 +2,11 @@ from typing import List
 from datetime import datetime
 import os
 
-import httpx
 from motor.motor_asyncio import AsyncIOMotorDatabase
 
 from ..repositories.base import BaseRepository
 from ..models.simulation_result import SimulationResult
+from .http_client import ServiceClient
 
 
 class SimulationService:
@@ -22,17 +22,18 @@ class SimulationService:
             "SIMULATION_SERVICE_URL",
             "http://localhost:8002",
         )
+        self.client = ServiceClient(
+            self.simulation_url,
+            timeout=120,
+            service_name="Simulation Service",
+        )
 
     async def run_simulation(self, params: dict) -> str:
-        async with httpx.AsyncClient(timeout=120) as client:
-            response = await client.post(
-                f"{self.simulation_url}/simulate",
-                json=params,
-            )
-
-        response.raise_for_status()
-
-        result = response.json()
+        result = await self.client.request(
+            "POST",
+            "/simulate",
+            json=params,
+        )
 
         simulation_id = result["simulation_id"]
 

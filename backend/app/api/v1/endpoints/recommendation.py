@@ -3,7 +3,7 @@ from fastapi import APIRouter, Depends, Query
 from ....api.deps import get_db, get_current_active_user
 from ....services.recommendation_service import RecommendationService
 from typing import Optional
-from recommendation_engine.models import RecommendationRequest
+from ....models.recommendation_models import RecommendationRequest
 
 router = APIRouter()
 

@@ -2,12 +2,12 @@ from typing import List
 from datetime import datetime
 import os
 
-import httpx
 from motor.motor_asyncio import AsyncIOMotorDatabase
 
 from ..repositories.base import BaseRepository
 from ..models.prediction import Prediction
-from ..core.exceptions import NotFoundError
+from ..core.exceptions import TwinFlowException
+from .http_client import ServiceClient
 
 
 class PredictionService:
@@ -16,12 +16,17 @@ class PredictionService:
         self.repo = BaseRepository[Prediction](
             db,
             "predictions",
-            Prediction
+            Prediction,
         )
 
         self.ai_service_url = os.getenv(
             "AI_SERVICE_URL",
-            "http://localhost:8001"
+            "http://localhost:8001",
+        )
+        self.client = ServiceClient(
+            self.ai_service_url,
+            timeout=60,
+            service_name="AI Service",
         )
 
     async def get_predictions_for_junction(
@@ -41,18 +46,11 @@ class PredictionService:
             "horizon": horizon,
         }
 
-        async with httpx.AsyncClient(timeout=60) as client:
-            response = await client.post(
-                f"{self.ai_service_url}/predict",
-                json=current_data,
-            )
-
-        if response.status_code != 200:
-            raise NotFoundError(
-                f"AI Service returned {response.status_code}"
-            )
-
-        pred = response.json()
+        pred = await self.client.request(
+            "POST",
+            "/predict",
+            json=current_data,
+        )
 
         pred_doc = {
             "junction_id": junction_id,
@@ -66,5 +64,7 @@ class PredictionService:
         }
 
         saved = await self.repo.create(pred_doc)
-
         return [saved]
+
+    async def save_prediction(self, prediction_data: dict) -> Prediction:
+        return await self.repo.create(prediction_data)

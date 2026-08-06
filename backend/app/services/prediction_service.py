@@ -5,6 +5,7 @@ from ..repositories.base import BaseRepository
 from ..models.prediction import Prediction
 from ..core.exceptions import NotFoundError
 from ai.prediction.traffic_predictor import TrafficPredictor
+from datetime import datetime
 
 class PredictionService:
     def __init__(self, db: AsyncIOMotorDatabase):

@@ -31,9 +31,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy application code
-COPY backend/ .
+COPY backend/ /app/
+COPY ai/ /app/ai/
 
-ENV PYTHONPATH=/app
+ENV PYTHONPATH=/app:/app/ai
 
 # Create non‑root user
 RUN useradd -m -u 1000 appuser && chown -R appuser:appuser /app

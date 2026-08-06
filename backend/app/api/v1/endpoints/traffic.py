@@ -1,7 +1,6 @@
 # backend/app/api/v1/endpoints/traffic.py
 from fastapi import APIRouter, Depends, Query
 from ....api.deps import get_db, get_current_active_user
-from ....core.database import get_db as get_db_dep
 from ....services.traffic_service import TrafficService
 from ....models.vehicle import Vehicle
 from ....models.incident import Incident

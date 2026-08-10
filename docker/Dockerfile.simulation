@@ -15,14 +15,13 @@ RUN apt-get update && apt-get install -y \
 # Set working directory
 WORKDIR /app
 
-# Copy simulation code
 COPY simulation/ /app/
 
-# Install Python dependencies
+# Generate valid SUMO network
+RUN netconvert --node-files=/app/network.nod.xml --edge-files=/app/network.edg.xml --output-file=/app/network.net.xml
+
 RUN pip3 install --no-cache-dir -r requirements.txt
 
-# Expose port
 EXPOSE 10000
 
-# Start FastAPI using uvicorn
 CMD ["python3", "-m", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "10000"]

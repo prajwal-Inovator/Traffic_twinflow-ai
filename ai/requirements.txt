@@ -32,3 +32,7 @@ h5py==3.12.1
 # Utilities
 tqdm==4.67.1
 pyyaml==6.0.2
+
+# HTTP server for AI service
+fastapi==0.115.0
+uvicorn==0.23.2

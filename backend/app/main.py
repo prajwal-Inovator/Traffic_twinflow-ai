@@ -5,6 +5,7 @@ import socketio
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+from services.integration import get_simulation_data, get_ai_prediction
 from app.core.database import connect_to_mongo
 from .api.router import api_router
 from .core.config import settings
@@ -91,3 +92,32 @@ app = socketio.ASGIApp(
     sio,
     other_asgi_app=fastapi_app,
 )
+
+@app.get("/smart-traffic")
+def smart_traffic():
+    sim_data = get_simulation_data()
+
+    if "error" in sim_data:
+        return sim_data
+
+    ai_result = get_ai_prediction(sim_data)
+
+    return {
+        "simulation": sim_data,
+        "ai_analysis": ai_result
+    }
+
+@app.get("/live-monitor")
+def live_monitor():
+    data = []
+
+    for _ in range(5):
+        sim = get_simulation_data()
+        ai = get_ai_prediction(sim)
+
+        data.append({
+            "simulation": sim,
+            "ai": ai
+        })
+
+    return data

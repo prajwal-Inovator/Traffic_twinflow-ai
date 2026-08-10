@@ -1,6 +1,6 @@
 # simulation/sumo_wrapper.py
 
-import subprocess
+import os
 import logging
 import traci
 import threading
@@ -16,12 +16,12 @@ class SUMOWrapper:
     def __init__(
         self,
         sumo_binary: str = "sumo",
-        config_file: str = "sumo_config.sumocfg",
+        config_file: str = "/app/sumo_config.sumocfg",
         gui: bool = False,
         headless: bool = True,
     ):
         self.sumo_binary = "sumo-gui" if gui else sumo_binary
-        self.config_file = config_file
+        self.config_file = os.path.abspath(config_file)
         self.headless = headless
         self.is_running = False
         self.simulation_time = 0
@@ -34,24 +34,23 @@ class SUMOWrapper:
             return False
 
         try:
+            if not os.path.isfile(self.config_file):
+                raise FileNotFoundError(f"SUMO config not found: {self.config_file}")
+
             cmd = [
                 self.sumo_binary,
-                "-c", self.config_file,
+                "-c",
+                self.config_file,
                 "--start",
                 "--quit-on-end",
                 "--no-warnings",
             ]
 
-            
-
-            # Add additional arguments
             for key, value in kwargs.items():
                 cmd.append(f"--{key}")
                 cmd.append(str(value))
 
             logger.info(f"Starting SUMO with command: {' '.join(cmd)}")
-
-            # ✅ Correct way (NO connect())
             traci.start(cmd)
 
             self.is_running = True
@@ -124,6 +123,24 @@ class SUMOWrapper:
             states[tls_id] = traci.trafficlight.getRedYellowGreenState(tls_id)
 
         return states
+
+    def get_detector_data(self) -> List[Dict[str, Any]]:
+        detectors = []
+        if not self.is_running:
+            return detectors
+
+        try:
+            detector_ids = traci.inductionloop.getIDList()
+            for det_id in detector_ids:
+                detectors.append({
+                    "id": det_id,
+                    "last_step_vehicle_number": traci.inductionloop.getLastStepVehicleNumber(det_id),
+                    "last_step_mean_speed": traci.inductionloop.getLastStepMeanSpeed(det_id),
+                })
+        except Exception:
+            return detectors
+
+        return detectors
 
     def set_traffic_light_state(self, tls_id: str, state: str):
         if self.is_running:

@@ -6,7 +6,7 @@ from contextlib import asynccontextmanager
 import socketio
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-
+from app.core.database import connect_to_mongo
 from .api.router import api_router
 from .core.config import settings
 from .core.exceptions import setup_exception_handlers
@@ -24,18 +24,14 @@ logger = logging.getLogger(__name__)
 # Lifespan
 # --------------------------------------------------
 @asynccontextmanager
-async def lifespan(app: FastAPI):
-    logger.info("Starting TwinFlow AI Backend")
-
-    await connect_to_mongo()
-    await ensure_indexes()
+async def lifespan(app):
+    try:
+        await connect_to_mongo()
+        logging.info("MongoDB connected")
+    except Exception as e:
+        logging.error(f"MongoDB failed: {e}")
 
     yield
-
-    logger.info("Shutting down TwinFlow AI Backend")
-
-    await close_mongo_connection()
-
 # --------------------------------------------------
 # FastAPI
 # --------------------------------------------------
@@ -93,3 +89,7 @@ original_app = app
 
 # Export Socket.IO app
 app = socketio_app
+
+@app.get("/health")
+async def health():
+    return {"status": "ok"}

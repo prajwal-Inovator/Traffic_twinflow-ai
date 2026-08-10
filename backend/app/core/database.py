@@ -1,25 +1,32 @@
-# backend/app/core/database.py
-import motor.motor_asyncio
-from typing import Optional
-from ..core.config import settings
+from motor.motor_asyncio import AsyncIOMotorClient
+import os
+import logging
 
-_db_client: Optional[motor.motor_asyncio.AsyncIOMotorClient] = None
-_db: Optional[motor.motor_asyncio.AsyncIOMotorDatabase] = None
+_db_client = None
 
 async def connect_to_mongo():
-    global _db_client, _db
-    _db_client = motor.motor_asyncio.AsyncIOMotorClient(settings.MONGO_URI)
-    _db = _db_client[settings.MONGO_DB_NAME]
-    # Test connection
-    await _db_client.admin.command("ping")
-
-async def close_mongo_connection():
     global _db_client
-    if _db_client:
-        _db_client.close()
-        _db_client = None
 
-def get_db() -> motor.motor_asyncio.AsyncIOMotorDatabase:
-    if _db is None:
-        raise RuntimeError("Database not connected")
-    return _db
+    try:
+        MONGO_URI = os.getenv("MONGO_URI")
+
+        if not MONGO_URI:
+            raise Exception("MONGO_URI not set")
+
+        _db_client = AsyncIOMotorClient(
+            MONGO_URI,
+            tls=True,
+            tlsAllowInvalidCertificates=False
+        )
+
+        # Async ping
+        await _db_client.admin.command("ping")
+
+        logging.info("✅ MongoDB Connected Successfully")
+
+    except Exception as e:
+        logging.error(f"❌ MongoDB Connection Failed: {e}")
+
+
+def get_db():
+    return _db_client

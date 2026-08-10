@@ -29,7 +29,7 @@ export const useAuthStore = create<AuthState>()(
         socketManager.connect(accessToken);
       },
 
-      logout: () => {
+      logout: async () => {
         set({ user: null, accessToken: null, refreshToken: null, isAuthenticated: false });
         const { socketManager } = await import('../api/socket');
         socketManager.disconnect();

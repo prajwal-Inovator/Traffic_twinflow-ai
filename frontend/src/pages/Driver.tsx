@@ -52,16 +52,16 @@ export default function Driver() {
       {speedRec.data && (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <Card title="Speed">
-            <div className="text-2xl font-bold text-blue-500">{speedRec.data.data.optimal_speed} km/h</div>
-            <div className="text-sm text-slate-500">Expected delay: {speedRec.data.data.expected_delay}s</div>
+            <div className="text-2xl font-bold text-blue-500">{(speedRec.data?.data as any)?.optimal_speed ?? (speedRec.data?.data as any)?.optimalSpeed} km/h</div>
+            <div className="text-sm text-slate-500">Expected delay: {(speedRec.data?.data as any)?.expected_delay ?? (speedRec.data?.data as any)?.expectedDelay}s</div>
           </Card>
           <Card title="Lane">
-            <div className="text-2xl font-bold text-green-500">Lane {laneRec.data?.data.optimal_lane}</div>
-            <div className="text-sm text-slate-500">Confidence: {laneRec.data?.data.confidence}</div>
+            <div className="text-2xl font-bold text-green-500">Lane {(laneRec.data?.data as any)?.optimal_lane ?? (laneRec.data?.data as any)?.optimalLane}</div>
+            <div className="text-sm text-slate-500">Confidence: {(laneRec.data?.data as any)?.confidence}</div>
           </Card>
           <Card title="Departure">
-            <div className="text-sm font-semibold">{new Date(departureRec.data?.data.departure_time).toLocaleTimeString()}</div>
-            <div className="text-sm text-slate-500">Fuel saved: {departureRec.data?.data.fuel_saved} L</div>
+            <div className="text-sm font-semibold">{new Date(((departureRec.data?.data as any)?.departure_time ?? (departureRec.data?.data as any)?.departureTime) || Date.now()).toLocaleTimeString()}</div>
+            <div className="text-sm text-slate-500">Fuel saved: {(departureRec.data?.data as any)?.fuel_saved ?? (departureRec.data?.data as any)?.fuelSaved} L</div>
           </Card>
         </div>
       )}

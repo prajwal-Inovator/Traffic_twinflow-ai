@@ -18,7 +18,7 @@ export default function Dashboard() {
 
   const stats = [
     { label: 'Live Vehicles', value: traffic?.vehicles?.length || 0, icon: Car },
-    { label: 'Active Incidents', value: incidents?.filter(i => !i.resolved).length || 0, icon: AlertTriangle },
+    { label: 'Active Incidents', value: incidents?.filter((i: any) => !i?.resolved).length || 0, icon: AlertTriangle },
     { label: 'Avg Speed', value: metrics?.average_speed || 0, icon: Clock, suffix: ' km/h' },
     { label: 'CO₂ Saved Today', value: metrics?.co2_saved_today || 0, icon: Leaf, suffix: ' kg' },
   ];
@@ -79,7 +79,7 @@ export default function Dashboard() {
       <Card title="Recent Incidents">
         {incidents && incidents.length > 0 ? (
           <div className="space-y-2">
-            {incidents.slice(0, 5).map((inc) => (
+            {incidents.slice(0, 5).map((inc: any) => (
               <div key={inc.id} className="flex items-center justify-between p-2 bg-slate-50 dark:bg-slate-800 rounded">
                 <div className="flex items-center gap-2">
                   <span className={`w-2 h-2 rounded-full ${
@@ -89,7 +89,7 @@ export default function Dashboard() {
                   }`} />
                   <span>{inc.description}</span>
                 </div>
-                <span className="text-xs text-slate-500">{new Date(inc.start_time).toLocaleTimeString()}</span>
+                <span className="text-xs text-slate-500">{new Date(inc.start_time ?? inc.startTime).toLocaleTimeString()}</span>
               </div>
             ))}
           </div>

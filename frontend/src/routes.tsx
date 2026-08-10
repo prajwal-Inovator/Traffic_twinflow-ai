@@ -17,7 +17,7 @@ const Settings = lazy(() => import('./pages/Settings'));
 const Driver = lazy(() => import('./pages/Driver'));
 const Authority = lazy(() => import('./pages/Authority'));
 
-const withSuspense = (Component: React.LazyExoticComponent<() => JSX.Element>) => (
+const withSuspense = (Component: React.LazyExoticComponent<React.ComponentType<any>>) => (
   <Suspense fallback={<Spinner size="lg" className="h-screen" />}>
     <Component />
   </Suspense>

@@ -19,7 +19,7 @@ export default defineConfig(({ mode }) => {
       },
     },
     define: {
-      'process.env.VITE_MAPBOX_TOKEN': JSON.stringify(env.VITE_MAPBOX_TOKEN),
+      'import.meta.env.VITE_MAPBOX_TOKEN': JSON.stringify(env.VITE_MAPBOX_TOKEN),
     },
   };
 });

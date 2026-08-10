@@ -39,7 +39,7 @@ export default function LiveDigitalTwin() {
               </div>
               <div className="flex justify-between">
                 <span>Active Incidents:</span>
-                <span className="font-semibold text-red-500">{traffic?.incidents?.filter(i => !i.resolved).length || 0}</span>
+                <span className="font-semibold text-red-500">{traffic?.incidents?.filter((i: any) => !i?.resolved).length || 0}</span>
               </div>
             </div>
           </Card>

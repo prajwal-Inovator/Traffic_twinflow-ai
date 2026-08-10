@@ -51,8 +51,8 @@ export default function Simulation() {
         <Card title="Simulation Results">
           {simResult ? (
             <div className="space-y-2 text-sm">
-              <div>Simulation ID: {simResult.simulation_id}</div>
-              <div>Status: {simResult.status}</div>
+              <div>Simulation ID: {(simResult as any)?.simulation_id ?? (simResult as any)?.data?.data?.simulation_id ?? (simResult as any)?.data?.data?.simulationId}</div>
+              <div>Status: {(simResult as any)?.status ?? (simResult as any)?.data?.data?.status}</div>
               <div>Time: {new Date().toLocaleString()}</div>
             </div>
           ) : (

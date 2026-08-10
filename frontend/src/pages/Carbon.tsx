@@ -1,6 +1,4 @@
-export default function Carbon() {
-  return <h1 className="text-2xl font-bold">Carbon & Fuel Prediction</h1>;
-}import { useCarbonDashboard } from '../hooks/useCarbon';
+import { useCarbonDashboard } from '../hooks/useCarbon';
 import { Card } from '../components/common/Card';
 import { CarbonChart } from '../components/charts/CarbonChart';
 import { Spinner } from '../components/common/Spinner';

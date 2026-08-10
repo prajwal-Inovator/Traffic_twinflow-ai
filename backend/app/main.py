@@ -73,6 +73,14 @@ setup_exception_handlers(fastapi_app)
 fastapi_app.include_router(api_router, prefix="/api")
 
 # --------------------------------------------------
+# ROOT (IMPORTANT for Render)
+# --------------------------------------------------
+
+@fastapi_app.get("/")
+async def root():
+    return {"message": "TwinFlow Backend Running"}
+
+# --------------------------------------------------
 # Health
 # --------------------------------------------------
 
@@ -84,16 +92,10 @@ async def health_check():
     }
 
 # --------------------------------------------------
-# Socket.IO (IMPORTANT FIX)
+# ✅ SMART TRAFFIC (FIXED HERE)
 # --------------------------------------------------
 
-# Wrap FastAPI inside Socket.IO
-app = socketio.ASGIApp(
-    sio,
-    other_asgi_app=fastapi_app,
-)
-
-@app.get("/smart-traffic")
+@fastapi_app.get("/smart-traffic")
 def smart_traffic():
     sim_data = get_simulation_data()
 
@@ -107,7 +109,11 @@ def smart_traffic():
         "ai_analysis": ai_result
     }
 
-@app.get("/live-monitor")
+# --------------------------------------------------
+# ✅ LIVE MONITOR
+# --------------------------------------------------
+
+@fastapi_app.get("/live-monitor")
 def live_monitor():
     data = []
 
@@ -121,3 +127,12 @@ def live_monitor():
         })
 
     return data
+
+# --------------------------------------------------
+# Socket.IO (DO NOT TOUCH)
+# --------------------------------------------------
+
+app = socketio.ASGIApp(
+    sio,
+    other_asgi_app=fastapi_app,
+)

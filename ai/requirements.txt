@@ -18,7 +18,7 @@ scipy==1.14.1
 # Geospatial (digital twin)
 geopandas==1.0.1
 shapely==2.0.6
-networkx==3.4.2
+networkx>=3.0,<3.4
 osmnx==1.9.4                 # For OSM import (if used directly)
 
 # Explainability

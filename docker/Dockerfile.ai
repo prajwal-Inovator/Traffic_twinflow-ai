@@ -1,5 +1,6 @@
-# docker/Dockerfile.ai
-
+# ============================
+# Builder Stage
+# ============================
 FROM python:3.10-slim AS builder
 
 WORKDIR /app
@@ -21,16 +22,17 @@ COPY ai/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # ============================
-# Production Image
+# Production Stage
 # ============================
-
 FROM python:3.10-slim
 
 WORKDIR /app
 
+# Copy installed packages
 COPY --from=builder /usr/local/lib/python3.10/site-packages /usr/local/lib/python3.10/site-packages
 COPY --from=builder /usr/local/bin /usr/local/bin
 
+# Install runtime dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
     libgl1-mesa-glx \
     libglib2.0-0 \
@@ -41,8 +43,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libgeos-dev \
     && rm -rf /var/lib/apt/lists/*
 
-COPY ai/ .
+# Copy ONLY AI service code
+COPY ai/ /app
 
+# Fix imports
 ENV PYTHONPATH=/app
 
 # Create non-root user
@@ -51,6 +55,8 @@ RUN useradd -m -u 1000 appuser && \
 
 USER appuser
 
-EXPOSE 8001
+# IMPORTANT: Render expects dynamic port
+EXPOSE 10000
 
-CMD ["uvicorn","main:app","--host","0.0.0.0","--port","8001"]
+# ✅ FIXED START COMMAND (Render compatible)
+CMD ["sh", "-c", "uvicorn main:app --host 0.0.0.0 --port ${PORT:-10000}"]

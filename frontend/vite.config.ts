@@ -9,7 +9,7 @@ export default defineConfig(({ mode }) => {
       port: 3000,
       proxy: {
         '/api': {
-          target: env.VITE_API_URL || 'https://twinflow-backend.onrender.com',
+          target: env.VITE_API_URL || 'https://traffic-twinflow-ai.onrender.com',
           changeOrigin: true,
         },
         '/ws': {

@@ -5,7 +5,7 @@ import socketio
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from services.integration import get_simulation_data, get_ai_prediction
+from app.services.integration import get_simulation_data, get_ai_prediction
 from app.core.database import connect_to_mongo
 from .api.router import api_router
 from .core.config import settings

@@ -10,7 +10,7 @@ from app.core.database import connect_to_mongo
 from .api.router import api_router
 from .core.config import settings
 from .core.exceptions import setup_exception_handlers
-from .core.database import connect_to_mongo, close_mongo_connection
+from .core.database import connect_to_mongo
 from .core.indexes import ensure_indexes
 from .websocket.handlers import sio
 

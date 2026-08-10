@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<net version="1.9">
+
+    <!-- NODES -->
+    <nodes>
+        <node id="n1" x="0.0" y="0.0" type="traffic_light"/>
+        <node id="n2" x="200.0" y="0.0" type="priority"/>
+    </nodes>
+
+    <!-- EDGES -->
+    <edges>
+        <edge id="e1" from="n1" to="n2" priority="1" numLanes="1" speed="13.9"/>
+    </edges>
+
+</net>

@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<net version="1.9">
+<net version="1.16">
 
-    <!-- NODES -->
-    <nodes>
-        <node id="n1" x="0.0" y="0.0" type="traffic_light"/>
-        <node id="n2" x="200.0" y="0.0" type="priority"/>
-    </nodes>
+    <location netOffset="0.00,0.00" convBoundary="0.00,0.00,200.00,0.00" origBoundary="0.00,0.00,200.00,0.00"/>
 
-    <!-- EDGES -->
-    <edges>
-        <edge id="e1" from="n1" to="n2" priority="1" numLanes="1" speed="13.9"/>
-    </edges>
+    <edge id="e1" from="n1" to="n2" priority="1" numLanes="1" speed="13.90">
+        <lane id="e1_0" index="0" speed="13.90" length="200.00" shape="0.00,0.00 200.00,0.00"/>
+    </edge>
+
+    <junction id="n1" type="priority" x="0.00" y="0.00" incLanes="" intLanes="" shape="0.00,0.00"/>
+    <junction id="n2" type="priority" x="200.00" y="0.00" incLanes="e1_0" intLanes="" shape="200.00,0.00"/>
 
 </net>

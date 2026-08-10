@@ -3,18 +3,14 @@
 # ============================
 FROM python:3.10-slim AS builder
 
-WORKDIR /app
+WORKDIR /build
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    gcc \
-    g++ \
+    gcc g++ \
     libgl1-mesa-glx \
     libglib2.0-0 \
-    libsm6 \
-    libxext6 \
-    libxrender-dev \
-    libgomp1 \
-    libgeos-dev \
+    libsm6 libxext6 libxrender-dev \
+    libgomp1 libgeos-dev \
     && rm -rf /var/lib/apt/lists/*
 
 COPY ai/requirements.txt .
@@ -28,35 +24,32 @@ FROM python:3.10-slim
 
 WORKDIR /app
 
-# Copy installed packages
+# Copy only installed packages
 COPY --from=builder /usr/local/lib/python3.10/site-packages /usr/local/lib/python3.10/site-packages
 COPY --from=builder /usr/local/bin /usr/local/bin
 
-# Install runtime dependencies
+# Install runtime deps
 RUN apt-get update && apt-get install -y --no-install-recommends \
     libgl1-mesa-glx \
     libglib2.0-0 \
-    libsm6 \
-    libxext6 \
-    libxrender-dev \
-    libgomp1 \
-    libgeos-dev \
+    libsm6 libxext6 libxrender-dev \
+    libgomp1 libgeos-dev \
     && rm -rf /var/lib/apt/lists/*
 
-# Copy ONLY AI service code
-COPY ai/ /app
+# 🚨 CRITICAL: copy ONLY ai folder (rename it to avoid conflict)
+COPY ai/ /app/ai
 
-# Fix imports
-ENV PYTHONPATH=/app
+# 👉 Set working dir to ai explicitly
+WORKDIR /app/ai
 
-# Create non-root user
+ENV PYTHONPATH=/app/ai
+
+# non-root user
 RUN useradd -m -u 1000 appuser && \
     chown -R appuser:appuser /app
 
 USER appuser
 
-# IMPORTANT: Render expects dynamic port
 EXPOSE 10000
 
-# ✅ FIXED START COMMAND (Render compatible)
-CMD ["sh", "-c", "cd /app && uvicorn main:app --host 0.0.0.0 --port ${PORT:-10000}"]
+CMD ["sh", "-c", "uvicorn main:app --host 0.0.0.0 --port ${PORT:-10000}"]

@@ -2,7 +2,7 @@
 import asyncio
 import logging
 from fastapi import FastAPI, BackgroundTasks
-from .sumo_wrapper import SUMOWrapper
+from sumo_wrapper import SUMOWrapper
 import yaml
 
 logging.basicConfig(level=logging.INFO)

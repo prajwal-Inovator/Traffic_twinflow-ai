@@ -42,8 +42,7 @@ class SUMOWrapper:
                 "--no-warnings",
             ]
 
-            if self.headless:
-                cmd.append("--no-gui")
+            
 
             # Add additional arguments
             for key, value in kwargs.items():

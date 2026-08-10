@@ -1,6 +1,3 @@
-# simulation/main.py
-
-import asyncio
 import logging
 from fastapi import FastAPI, HTTPException
 from sumo_wrapper import SUMOWrapper
@@ -10,67 +7,61 @@ logger = logging.getLogger(__name__)
 
 app = FastAPI()
 
-# Initialize SUMO
 sim = SUMOWrapper(config_file="/app/sumo_config.sumocfg")
 
 
-# ✅ Startup: run SUMO in background (non-blocking)
-@app.on_event("startup")
-async def startup():
-    async def _start_sumo():
-        loop = asyncio.get_running_loop()
-        started = await loop.run_in_executor(None, sim.start)
-        if not started:
-            logger.warning("SUMO failed to start; API still running.")
-
-    asyncio.create_task(_start_sumo())
-
-
-# ✅ Shutdown
-@app.on_event("shutdown")
-async def shutdown():
-    sim.stop()
-
-
-# ✅ ROOT ENDPOINT (fixes Render "In Progress")
+# ✅ ROOT (Render health fix)
 @app.get("/")
-async def root():
+def root():
     return {"message": "TwinFlow Simulation Running"}
 
 
-# ✅ HEALTH CHECK
+# ✅ HEALTH
 @app.get("/health")
-async def health():
+def health():
     return {"status": "ok"}
 
 
-# ✅ SIMULATION STEP
-@app.get("/simulation/step")
-async def step(steps: int = 1):
+# ✅ START SIMULATION (ON DEMAND)
+@app.get("/start")
+def start():
+    if not sim.is_running:
+        sim.start()
+    return {"status": "started"}
+
+
+# ✅ STEP SIMULATION (SAFE)
+@app.get("/step")
+def step(steps: int = 1):
     try:
+        if not sim.is_running:
+            sim.start()
+
         sim.step(steps)
         return {"simulation_time": sim.simulation_time}
-    except RuntimeError as exc:
-        raise HTTPException(status_code=503, detail=str(exc))
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
 
 
-# ✅ VEHICLE DATA
-@app.get("/simulation/vehicles")
-async def get_vehicles():
+# ✅ GET VEHICLES
+@app.get("/vehicles")
+def vehicles():
+    if not sim.is_running:
+        return {"message": "simulation not started"}
     return sim.get_vehicle_positions()
 
 
-# ✅ TRAFFIC LIGHT DATA
-@app.get("/simulation/traffic-lights")
-async def get_traffic_lights():
+# ✅ TRAFFIC LIGHTS
+@app.get("/traffic")
+def traffic():
+    if not sim.is_running:
+        return {}
     return sim.get_traffic_light_states()
 
 
-# ✅ DETECTOR DATA (safe fallback)
-@app.get("/simulation/detectors")
-async def get_detectors():
-    try:
-        # Example detector ID (change if needed)
-        return sim.get_detector_data("detector_1")
-    except Exception:
-        return {"message": "No detector data available"}
+# ✅ STOP (VERY IMPORTANT FOR MEMORY)
+@app.get("/stop")
+def stop():
+    sim.stop()
+    return {"status": "stopped"}

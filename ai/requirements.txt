@@ -11,15 +11,15 @@ xgboost==2.1.3
 scikit-learn==1.6.0
 
 # Data Handling
-pandas==2.2.3
-numpy==1.26.4
+pandas>=1.5
+numpy>=1.23
 scipy==1.14.1
 
 # Geospatial (digital twin)
-geopandas==1.0.1
-shapely==2.0.6
+geopandas>=0.12,<0.15
+shapely>=2.0
 networkx>=3.0,<3.4
-osmnx==1.9.4                 # For OSM import (if used directly)
+osmnx==1.9.4                # For OSM import (if used directly)
 
 # Explainability
 shap==0.46.0

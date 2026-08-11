@@ -21,12 +21,16 @@ export const useAuthStore = create<AuthState>()(
       isAuthenticated: false,
 
       login: async (email, password) => {
-        const response = await apiClient.post('/v1/auth/login', { email, password });
-        const { user, accessToken, refreshToken } = response.data.data;
-        set({ user, accessToken, refreshToken, isAuthenticated: true });
-        // Connect WebSocket with token
-        const { socketManager } = await import('../api/socket');
-        socketManager.connect(accessToken);
+        try {
+          const response = await apiClient.post('/auth/login', { email, password });
+          const { user, accessToken, refreshToken } = response.data.data;
+          set({ user, accessToken, refreshToken, isAuthenticated: true });
+          const { socketManager } = await import('../api/socket');
+          socketManager.connect(accessToken);
+        } catch (error: any) {
+          const message = error?.response?.data?.message || error?.message || 'Login failed';
+          throw new Error(message);
+        }
       },
 
       logout: async () => {
@@ -34,11 +38,11 @@ export const useAuthStore = create<AuthState>()(
         const { socketManager } = await import('../api/socket');
         socketManager.disconnect();
         // Optionally call logout API
-        apiClient.post('/v1/auth/logout').catch(() => {});
+        apiClient.post('/auth/logout').catch(() => {});
       },
 
       refreshAccessToken: async (refreshToken) => {
-        const response = await apiClient.post('/v1/auth/refresh', { refreshToken });
+        const response = await apiClient.post('/auth/refresh', { refreshToken });
         const { accessToken } = response.data.data;
         set({ accessToken });
         return accessToken;

@@ -38,15 +38,15 @@ export default function Analytics() {
           <div className="space-y-2">
             <div className="flex justify-between">
               <span>Average Speed</span>
-              <span className="font-semibold">{metrics?.avg_speed || 0} km/h</span>
+              <span className="font-semibold">{metrics?.avg_speed ?? '-'} km/h</span>
             </div>
             <div className="flex justify-between">
               <span>Total Vehicles Today</span>
-              <span className="font-semibold">{metrics?.total_vehicles || 0}</span>
+              <span className="font-semibold">{metrics?.total_vehicles ?? '-'}</span>
             </div>
             <div className="flex justify-between">
               <span>Incidents Resolved</span>
-              <span className="font-semibold">{metrics?.resolved_incidents || 0}</span>
+              <span className="font-semibold">{metrics?.resolved_incidents ?? '-'}</span>
             </div>
           </div>
         </Card>

@@ -8,10 +8,10 @@ export const trafficApi = {
     apiClient.get<ApiResponse<TrafficUpdate>>('/v1/traffic/live'),
 
   getJunctions: (params?: { lat?: number; lng?: number; radius?: number }) =>
-    apiClient.get<ApiResponse<Junction[]>>('/v1/traffic/junctions', { params }),
+    apiClient.get<ApiResponse<Junction[]>>('/junctions', { params }),
 
   getIncidents: () =>
-    apiClient.get<ApiResponse<Incident[]>>('/v1/traffic/incidents'),
+    apiClient.get<ApiResponse<Incident[]>>('/emergency'),
 
   getVehicles: () =>
     apiClient.get<ApiResponse<Vehicle[]>>('/v1/traffic/vehicles'),
@@ -27,12 +27,12 @@ export const predictionApi = {
 
 export const negotiationApi = {
   getRecommendations: (junctionId?: string) =>
-    apiClient.get<ApiResponse<MasterRecommendation[]>>('/v1/negotiation/recommendations', {
+    apiClient.get<ApiResponse<MasterRecommendation[]>>('/negotiation', {
       params: { junctionId },
     }),
   triggerNegotiation: (junctionId: string) =>
     apiClient.post<ApiResponse<{ negotiationId: string }>>(
-      `/v1/negotiation/trigger/${junctionId}`
+      `/negotiation/trigger/${junctionId}`
     ),
 };
 
@@ -47,9 +47,9 @@ export const simulationApi = {
 
 export const carbonApi = {
   getReport: (from?: string, to?: string) =>
-    apiClient.get<ApiResponse<any>>('/v1/carbon/report', { params: { from, to } }),
+    apiClient.get<ApiResponse<any>>('/carbon/report', { params: { from, to } }),
   getDashboardMetrics: () =>
-    apiClient.get<ApiResponse<any>>('/v1/carbon/dashboard'),
+    apiClient.get<ApiResponse<any>>('/carbon'),
 };
 
 export const recommendationApi = {
@@ -63,12 +63,12 @@ export const recommendationApi = {
 
 export const infrastructureApi = {
   getHealth: () =>
-    apiClient.get<ApiResponse<any>>('/v1/infrastructure/health'),
+    apiClient.get<ApiResponse<any>>('/infrastructure'),
   getRoads: () =>
-    apiClient.get<ApiResponse<any>>('/v1/infrastructure/roads'),
+    apiClient.get<ApiResponse<any>>('/infrastructure/roads'),
 };
 
 export const analyticsApi = {
   getDashboardMetrics: () =>
-    apiClient.get<ApiResponse<any>>('/v1/analytics/dashboard'),
+    apiClient.get<ApiResponse<any>>('/analytics'),
 };

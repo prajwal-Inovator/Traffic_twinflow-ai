@@ -9,6 +9,10 @@ export default function Infrastructure() {
     queryKey: ['infraHealth'],
     queryFn: async () => {
       const resp = await infrastructureApi.getHealth();
+      console.log('Infrastructure response', resp.data);
+      if (!resp.data?.data) {
+        console.error('Infrastructure API returned empty response', resp.data);
+      }
       return resp.data.data;
     },
     refetchInterval: 60000,

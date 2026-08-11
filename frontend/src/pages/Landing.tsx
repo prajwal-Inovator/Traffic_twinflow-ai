@@ -15,9 +15,16 @@ export default function Landing() {
     return null;
   }
 
+  const [error, setError] = useState<string | null>(null);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    await login(email, password);
+    setError(null);
+    try {
+      await login(email, password);
+    } catch (err: any) {
+      setError(err?.response?.data?.message || err?.message || 'Login failed.');
+    }
   };
 
   return (
@@ -46,6 +53,7 @@ export default function Landing() {
           </div>
           <Button type="submit" className="w-full">Login</Button>
         </form>
+        {error && <div className="mt-3 text-sm text-red-500">{error}</div>}
         <div className="mt-4 text-center text-sm text-slate-500">
           Demo: admin@twinflow.ai / admin123
         </div>

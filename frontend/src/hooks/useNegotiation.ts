@@ -14,7 +14,12 @@ export const useRecommendations = (junctionId?: string) => {
     queryKey: ['recommendations', junctionId],
     queryFn: async () => {
       const resp = await negotiationApi.getRecommendations(junctionId);
-      return (resp.data.data as MasterRecommendation[]) || [];
+      console.log('Negotiation recommendations response', resp.data);
+      const data = resp.data.data as MasterRecommendation[];
+      if (!data?.length) {
+        console.error('Negotiation recommendations API returned empty response', resp.data);
+      }
+      return data || [];
     },
     refetchInterval: 5000,
   });

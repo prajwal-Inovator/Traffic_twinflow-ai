@@ -78,7 +78,7 @@ services:
     staticPublishPath: dist
     envVars:
       - key: VITE_API_URL
-        value: https://twinflow-backend.onrender.com/api
+        value: https://twinflow-backend.onrender.com
       - key: VITE_WS_URL
         value: wss://twinflow-backend.onrender.com/ws
       - key: VITE_MAPBOX_TOKEN

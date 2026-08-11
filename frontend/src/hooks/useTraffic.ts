@@ -14,7 +14,12 @@ export const useLiveTraffic = () => {
     queryKey: ['liveTraffic'],
     queryFn: async () => {
       const resp = await trafficApi.getLiveTraffic();
-      return (resp.data.data as TrafficUpdate) || {
+      console.log('Live traffic response', resp.data);
+      const data = resp.data.data as TrafficUpdate;
+      if (!data?.junctions?.length && !data?.vehicles?.length && !data?.incidents?.length) {
+        console.error('Live traffic API returned empty response', resp.data);
+      }
+      return data || {
         timestamp: new Date().toISOString(),
         junctions: [],
         vehicles: [],
@@ -52,7 +57,12 @@ export const useJunctions = () => {
     queryKey: ['junctions'],
     queryFn: async () => {
       const resp = await trafficApi.getJunctions();
-      return (resp.data.data as Junction[]) || [];
+      console.log('Junctions response', resp.data);
+      const junctions = resp.data.data as Junction[];
+      if (!junctions?.length) {
+        console.error('Junctions API returned empty response', resp.data);
+      }
+      return junctions || [];
     },
     staleTime: 60000,
   });

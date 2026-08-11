@@ -30,7 +30,7 @@ export default function Landing() {
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full p-2 border rounded"
+              className="w-full p-2 border rounded text-slate-900 dark:text-slate-100 bg-white dark:bg-slate-800"
               required
             />
           </div>
@@ -40,7 +40,7 @@ export default function Landing() {
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full p-2 border rounded"
+              className="w-full p-2 border rounded text-slate-900 dark:text-slate-100 bg-white dark:bg-slate-800"
               required
             />
           </div>

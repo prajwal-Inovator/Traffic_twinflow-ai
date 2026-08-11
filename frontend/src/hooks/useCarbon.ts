@@ -14,7 +14,7 @@ export const useCarbonReport = (from?: string, to?: string) => {
 };
 
 export const useCarbonDashboard = () => {
-  return useQuery({
+  return useQuery<any, Error>({
     queryKey: ['carbonDashboard'],
     queryFn: async () => {
       const resp = await carbonApi.getDashboardMetrics();

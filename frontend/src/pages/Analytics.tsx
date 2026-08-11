@@ -4,9 +4,10 @@ import { BaseChart } from '../components/charts/BaseChart';
 import { Spinner } from '../components/common/Spinner';
 
 export default function Analytics() {
-  const { data: metrics, isLoading } = useDashboardMetrics();
+  const { data: metrics, isLoading, isError, error } = useDashboardMetrics();
 
   if (isLoading) return <Spinner size="lg" className="h-screen" />;
+  if (isError) return <div className="text-center text-red-500 py-10">Unable to load analytics: {String(error)}</div>;
 
   const pieOption = {
     tooltip: { trigger: 'item' },

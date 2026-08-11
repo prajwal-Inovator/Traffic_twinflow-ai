@@ -2,14 +2,21 @@ import { useQuery } from '@tanstack/react-query';
 import { trafficApi } from '../api/endpoints';
 import { Card } from '../components/common/Card';
 import { Button } from '../components/common/Button';
+import { Spinner } from '../components/common/Spinner';
 import { AlertTriangle, CheckCircle } from 'lucide-react';
 
 export default function Emergency() {
-  const { data: incidents, refetch } = useQuery({
+  const { data: incidents, refetch, isLoading, isError, error } = useQuery<any[], Error>({
     queryKey: ['emergencies'],
-    queryFn: () => trafficApi.getIncidents().then(res => res.data.data),
+    queryFn: async () => {
+      const resp = await trafficApi.getIncidents();
+      return (resp.data.data as any[]) || [];
+    },
     refetchInterval: 10000,
   });
+
+  if (isLoading) return <Spinner size="lg" className="h-screen" />;
+  if (isError) return <div className="text-center text-red-500 py-10">Unable to load emergency incidents: {String(error)}</div>;
 
   const activeEmergencies = incidents?.filter((i: any) => !i.resolved && i.severity === 'critical');
 

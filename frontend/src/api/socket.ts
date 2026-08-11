@@ -9,7 +9,13 @@ class SocketManager {
   connect(token?: string) {
     if (this.socket?.connected) return;
 
-    this.socket = io(import.meta.env.VITE_WS_URL || '/ws', {
+    const socketUrl = import.meta.env.VITE_WS_URL;
+    if (!socketUrl) {
+      console.warn('[Socket] Missing VITE_WS_URL');
+      return;
+    }
+
+    this.socket = io(socketUrl, {
       transports: ['websocket'],
       auth: token ? { token } : undefined,
       reconnection: true,

@@ -3,7 +3,7 @@ import { useQuery } from '@tanstack/react-query';
 import { analyticsApi } from '../api/endpoints';
 
 export const useDashboardMetrics = () => {
-  return useQuery({
+  return useQuery<any, Error>({
     queryKey: ['dashboardMetrics'],
     queryFn: async () => {
       const resp = await analyticsApi.getDashboardMetrics();

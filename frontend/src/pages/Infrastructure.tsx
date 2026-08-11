@@ -2,13 +2,20 @@ import { useQuery } from '@tanstack/react-query';
 import { infrastructureApi } from '../api/endpoints';
 import { Card } from '../components/common/Card';
 import { CheckCircle, XCircle } from 'lucide-react';
+import { Spinner } from '../components/common/Spinner';
 
 export default function Infrastructure() {
-  const { data: health } = useQuery({
+  const { data: health, isError, error, isLoading } = useQuery<any, Error>({
     queryKey: ['infraHealth'],
-    queryFn: () => infrastructureApi.getHealth().then(res => res.data.data),
+    queryFn: async () => {
+      const resp = await infrastructureApi.getHealth();
+      return resp.data.data;
+    },
     refetchInterval: 60000,
   });
+
+  if (isLoading) return <Spinner size="lg" className="h-screen" />;
+  if (isError) return <div className="text-center text-red-500 py-10">Unable to load infrastructure health: {String(error)}</div>;
 
   return (
     <div className="space-y-6">

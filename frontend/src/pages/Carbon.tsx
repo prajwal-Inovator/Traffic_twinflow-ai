@@ -4,9 +4,10 @@ import { CarbonChart } from '../components/charts/CarbonChart';
 import { Spinner } from '../components/common/Spinner';
 
 export default function Carbon() {
-  const { data: metrics, isLoading } = useCarbonDashboard();
+  const { data: metrics, isLoading, isError, error } = useCarbonDashboard();
 
   if (isLoading) return <Spinner size="lg" className="h-screen" />;
+  if (isError) return <div className="text-center text-red-500 py-10">Unable to load carbon metrics: {String(error)}</div>;
 
   const data = [
     { date: 'Mon', co2: metrics?.daily_co2 || 0, fuel: metrics?.daily_fuel || 0 },

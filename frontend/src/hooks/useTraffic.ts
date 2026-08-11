@@ -4,16 +4,22 @@ import { trafficApi } from '../api/endpoints';
 import { useTrafficStore } from '../store/trafficStore';
 import { useEffect } from 'react';
 import { socketManager, TrafficEvents } from '../api/socket';
+import { TrafficUpdate, Junction } from '../types/traffic.types';
 
 export const useLiveTraffic = () => {
   const { setLiveData, setLoading, setError } = useTrafficStore();
   const queryClient = useQueryClient();
 
-  const query = useQuery({
+  const query = useQuery<TrafficUpdate, Error>({
     queryKey: ['liveTraffic'],
     queryFn: async () => {
       const resp = await trafficApi.getLiveTraffic();
-      return resp.data.data;
+      return (resp.data.data as TrafficUpdate) || {
+        timestamp: new Date().toISOString(),
+        junctions: [],
+        vehicles: [],
+        incidents: [],
+      };
     },
     refetchInterval: 10000, // 10 seconds
     staleTime: 5000,
@@ -42,11 +48,11 @@ export const useLiveTraffic = () => {
 };
 
 export const useJunctions = () => {
-  return useQuery({
+  return useQuery<Junction[], Error>({
     queryKey: ['junctions'],
     queryFn: async () => {
       const resp = await trafficApi.getJunctions();
-      return resp.data.data;
+      return (resp.data.data as Junction[]) || [];
     },
     staleTime: 60000,
   });

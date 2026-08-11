@@ -1,17 +1,24 @@
 import { DigitalTwinMap } from '../components/map/DigitalTwinMap';
 import { RippleHeatmap } from '../components/map/RippleHeatmap';
 import { TrafficLayer } from '../components/map/TrafficLayer';
-import { useLiveTraffic } from '../hooks/useTraffic';
+import { useLiveTraffic, useJunctions } from '../hooks/useTraffic';
 import { useRecommendations } from '../hooks/useNegotiation';
 import { useRippleEffects } from '../hooks/useSimulation';
 import { Card } from '../components/common/Card';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function LiveDigitalTwin() {
   const { data: traffic } = useLiveTraffic();
   const { data: recommendations } = useRecommendations();
+  const { data: junctions } = useJunctions();
   const [selectedJunction, setSelectedJunction] = useState<string | null>(null);
   const { data: rippleData } = useRippleEffects(selectedJunction || '', [5, 10, 20, 30]);
+
+  useEffect(() => {
+    if (!selectedJunction && junctions?.length) {
+      setSelectedJunction(junctions[0].id);
+    }
+  }, [junctions, selectedJunction]);
 
   return (
     <div className="space-y-6">
@@ -42,6 +49,21 @@ export default function LiveDigitalTwin() {
                 <span className="font-semibold text-red-500">{traffic?.incidents?.filter((i: any) => !i?.resolved).length || 0}</span>
               </div>
             </div>
+          </Card>
+
+          <Card title="Select Junction">
+            <select
+              className="w-full p-2 border rounded bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100"
+              value={selectedJunction || ''}
+              onChange={(e) => setSelectedJunction(e.target.value)}
+            >
+              <option value="">Select a junction</option>
+              {junctions?.map((j: any) => (
+                <option key={j.id} value={j.id}>
+                  {j.name || j.id}
+                </option>
+              ))}
+            </select>
           </Card>
 
           {/* Ripple Heatmap */}

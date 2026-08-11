@@ -4,16 +4,17 @@ import { negotiationApi } from '../api/endpoints';
 import { socketManager, TrafficEvents } from '../api/socket';
 import { useEffect } from 'react';
 import { useTrafficStore } from '../store/trafficStore';
+import { MasterRecommendation } from '../types/negotiation.types';
 
 export const useRecommendations = (junctionId?: string) => {
   const { setRecommendations } = useTrafficStore();
   const queryClient = useQueryClient();
 
-  const query = useQuery({
+  const query = useQuery<MasterRecommendation[], Error>({
     queryKey: ['recommendations', junctionId],
     queryFn: async () => {
       const resp = await negotiationApi.getRecommendations(junctionId);
-      return resp.data.data;
+      return (resp.data.data as MasterRecommendation[]) || [];
     },
     refetchInterval: 5000,
   });

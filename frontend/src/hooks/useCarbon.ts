@@ -1,17 +1,16 @@
 import { useEffect, useState } from "react";
-import api from "../api/client";
+import { apiClient } from "../api/client";
 
-export default function useCarbon() {
+export function useCarbonDashboard() {
   const [data, setData] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await api.get("/carbon");
+        const res = await apiClient.get("/carbon");
         setData(res.data);
-        console.log(res.data);
       } catch (err) {
-        console.error("Carbon error:", err);
+        console.error(err);
       }
     };
 

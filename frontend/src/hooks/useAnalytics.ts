@@ -1,17 +1,16 @@
 import { useEffect, useState } from "react";
-import api from "../api/client";
+import { apiClient } from "../api/client";
 
-export default function useAnalytics() {
+export function useDashboardMetrics() {
   const [data, setData] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await api.get("/analytics");
+        const res = await apiClient.get("/analytics");
         setData(res.data);
-        console.log(res.data);
       } catch (err) {
-        console.error("Analytics error:", err);
+        console.error(err);
       }
     };
 
